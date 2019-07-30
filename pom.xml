@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ltd.beihu.core</groupId>
+    <artifactId>beihu-boot-build</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>beihu-boot</name>
+    <description>beihu-boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
+        <main.user.dir>${basedir}</main.user.dir>
+        <license.maven.plugin>3.0</license.maven.plugin>
+        <maven.java.formatter.plugin>0.4</maven.java.formatter.plugin>
+        <project.encoding>UTF-8</project.encoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.plugin>3.1</maven.compiler.plugin>
+    </properties>
+
+    <modules>
+
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${maven.deploy.plugin.version}</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin}</version>
+                <configuration>
+                    <encoding>${project.encoding}</encoding>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
