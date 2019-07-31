@@ -4,47 +4,43 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>ltd.beihu.core</groupId>
-        <artifactId>beihu-boot-build</artifactId>
+        <artifactId>beihu-boot-samples</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>beihu-boot-samples</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>beihu-boot-mongo-sample</artifactId>
 
     <properties>
-        <main.user.dir>${basedir}/..</main.user.dir>
+        <java.version>1.8</java.version>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
-    <modules>
-        <module>beihu-boot-mongo-sample</module>
-    </modules>
-
-    <!--
+    <dependencies>
+        <!--SOFARPC 依赖-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>rpc-sofa-boot-starter</artifactId>
+        </dependency>
+        <!--runtime 依赖： 支持Bean异步初始化-->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>runtime-sofa-boot-starter</artifactId>
+        </dependency>
+
+        <!-- Mongo Starter -->
+        <dependency>
+            <groupId>ltd.beihu.core</groupId>
+            <artifactId>mongo-beihu-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-    -->
+    </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>ltd.beihu.core</groupId>
-                <artifactId>beihu-boot-dependencies</artifactId>
-                <version>${project.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>

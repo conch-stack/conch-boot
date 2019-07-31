@@ -1,0 +1,72 @@
+{
+  "groups": [
+    {
+      "name": "beihu.data.mongodb",
+      "type": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "beihu.data.mongodb.authentication-database",
+      "type": "java.lang.String",
+      "description": "Authentication database name.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.data.mongodb.database",
+      "type": "java.lang.String",
+      "description": "Database name.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.data.mongodb.env",
+      "type": "java.lang.String",
+      "description": "当前环境",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.data.mongodb.field-naming-strategy",
+      "type": "java.lang.Class<?>",
+      "description": "Fully qualified name of the FieldNamingStrategy to use.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.data.mongodb.grid-fs-database",
+      "type": "java.lang.String",
+      "description": "GridFS database name.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.data.mongodb.host",
+      "type": "java.lang.String",
+      "description": "Mongo server host. Cannot be set with URI.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.data.mongodb.password",
+      "type": "java.lang.Character[]",
+      "description": "Login password of the mongo server. Cannot be set with URI.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.data.mongodb.port",
+      "type": "java.lang.Integer",
+      "description": "Mongo server port. Cannot be set with URI.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.data.mongodb.uri",
+      "type": "java.lang.String",
+      "description": "Mongo database URI. Cannot be set with host, port and credentials.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.data.mongodb.username",
+      "type": "java.lang.String",
+      "description": "Login user of the mongo server. Cannot be set with URI.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    }
+  ],
+  "hints": []
+}
