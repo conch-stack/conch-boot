@@ -1,3 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoDataAutoConfiguration, \
-  ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoAutoConfiguration
+  ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.redis.BeihuRedisAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.redis.BeihuRedissonConfiguration

@@ -19,5 +19,6 @@
     <modules>
         <module>mongo-beihu-boot</module>
         <module>tools-beihu-boot</module>
+        <module>redis-beihu-boot</module>
     </modules>
 </project>

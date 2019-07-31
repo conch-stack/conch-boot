@@ -33,6 +33,7 @@
         <commons.beanutils.version>1.9.3</commons.beanutils.version>
         <guava.version>28.0-jre</guava.version>
         <reflections.version>0.9.11</reflections.version>
+        <redisson.version>3.11.1</redisson.version>
 
         <!--maven plugin-->
         <maven.staging.plugin>1.6.7</maven.staging.plugin>
@@ -58,11 +59,21 @@
                 <artifactId>beihu-boot-autoconfigure</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>redis-beihu-boot</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
 
             <!-- starter-->
             <dependency>
                 <groupId>ltd.beihu.core</groupId>
                 <artifactId>mongo-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>redis-beihu-boot-starter</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
 
@@ -81,6 +92,11 @@
                 <groupId>org.reflections</groupId>
                 <artifactId>reflections</artifactId>
                 <version>${reflections.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -4,6 +4,11 @@
       "name": "beihu.data.mongodb",
       "type": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties",
       "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "spring.redis.beihu",
+      "type": "ltd.beihu.core.boot.autoconfigure.redis.BeihuRedisProperties",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.redis.BeihuRedisProperties"
     }
   ],
   "properties": [
@@ -66,6 +71,18 @@
       "type": "java.lang.String",
       "description": "Login user of the mongo server. Cannot be set with URI.",
       "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "spring.redis.beihu.lock",
+      "type": "java.lang.String",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.redis.BeihuRedisProperties",
+      "defaultValue": "l_"
+    },
+    {
+      "name": "spring.redis.beihu.prefix",
+      "type": "java.lang.String",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.redis.BeihuRedisProperties",
+      "defaultValue": "p_"
     }
   ],
   "hints": []

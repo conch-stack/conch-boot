@@ -50,6 +50,11 @@
 			<artifactId>mongo-beihu-boot</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>ltd.beihu.core</groupId>
+			<artifactId>redis-beihu-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 </project>

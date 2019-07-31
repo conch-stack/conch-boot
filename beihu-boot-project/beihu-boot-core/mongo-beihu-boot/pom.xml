@@ -10,7 +10,6 @@
 
 	<artifactId>mongo-beihu-boot</artifactId>
 
-
 	<properties>
 		<main.user.dir>${basedir}/../../..</main.user.dir>
 	</properties>
