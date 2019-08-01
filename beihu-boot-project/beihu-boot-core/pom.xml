@@ -12,14 +12,11 @@
     <artifactId>beihu-boot-core</artifactId>
     <packaging>pom</packaging>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <modules>
         <module>mongo-beihu-boot</module>
         <module>tools-beihu-boot</module>
         <module>redis-beihu-boot</module>
         <module>web-beihu-boot</module>
+        <module>datasource-beihu-boot</module>
     </modules>
 </project>

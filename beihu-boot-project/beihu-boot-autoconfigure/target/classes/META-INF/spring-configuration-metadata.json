@@ -1,6 +1,27 @@
 {
   "groups": [
     {
+      "name": "api.boot.datasource",
+      "type": "ltd.beihu.core.boot.autoconfigure.datasource.ApiBootDataSourceSwitchProperties",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.datasource.ApiBootDataSourceSwitchProperties"
+    },
+    {
+      "name": "api.boot.enhance",
+      "type": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties"
+    },
+    {
+      "name": "api.boot.enhance.configuration",
+      "type": "org.apache.ibatis.session.Configuration",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties",
+      "sourceMethod": "getConfiguration()"
+    },
+    {
+      "name": "api.boot.pageable",
+      "type": "ltd.beihu.core.boot.autoconfigure.pageable.ApiBootMyBatisPageableProperties",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.pageable.ApiBootMyBatisPageableProperties"
+    },
+    {
       "name": "beihu.data.mongodb",
       "type": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties",
       "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
@@ -17,6 +38,317 @@
     }
   ],
   "properties": [
+    {
+      "name": "api.boot.datasource.druid",
+      "type": "java.util.Map<java.lang.String,ltd.beihu.core.datasource.boot.config.DataSourceDruidConfig>",
+      "description": "config druid type datasource list",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.datasource.ApiBootDataSourceSwitchProperties"
+    },
+    {
+      "name": "api.boot.datasource.hikari",
+      "type": "java.util.Map<java.lang.String,ltd.beihu.core.datasource.boot.config.DataSourceHikariConfig>",
+      "description": "config hikari type datasource list",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.datasource.ApiBootDataSourceSwitchProperties"
+    },
+    {
+      "name": "api.boot.datasource.primary",
+      "type": "java.lang.String",
+      "description": "primary datasource pool name default is master",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.datasource.ApiBootDataSourceSwitchProperties",
+      "defaultValue": "master"
+    },
+    {
+      "name": "api.boot.enhance.check-config-location",
+      "type": "java.lang.Boolean",
+      "description": "Indicates whether perform presence check of the MyBatis xml config file.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "api.boot.enhance.config-location",
+      "type": "java.lang.String",
+      "description": "Location of MyBatis xml config file.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties"
+    },
+    {
+      "name": "api.boot.enhance.configuration-properties",
+      "type": "java.util.Properties",
+      "description": "Externalized properties for MyBatis configuration.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties"
+    },
+    {
+      "name": "api.boot.enhance.configuration.aggressive-lazy-loading",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.auto-mapping-behavior",
+      "type": "org.apache.ibatis.session.AutoMappingBehavior",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.auto-mapping-unknown-column-behavior",
+      "type": "org.apache.ibatis.session.AutoMappingUnknownColumnBehavior",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.cache-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.cache-names",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.caches",
+      "type": "java.util.Collection<org.apache.ibatis.cache.Cache>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.call-setters-on-nulls",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.configuration-factory",
+      "type": "java.lang.Class<?>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.database-id",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.default-executor-type",
+      "type": "org.apache.ibatis.session.ExecutorType",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.default-fetch-size",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.default-statement-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.environment",
+      "type": "org.apache.ibatis.mapping.Environment",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.incomplete-cache-refs",
+      "type": "java.util.Collection<org.apache.ibatis.builder.CacheRefResolver>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.incomplete-methods",
+      "type": "java.util.Collection<org.apache.ibatis.builder.annotation.MethodResolver>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.incomplete-result-maps",
+      "type": "java.util.Collection<org.apache.ibatis.builder.ResultMapResolver>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.incomplete-statements",
+      "type": "java.util.Collection<org.apache.ibatis.builder.xml.XMLStatementBuilder>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.interceptors",
+      "type": "java.util.List<org.apache.ibatis.plugin.Interceptor>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.jdbc-type-for-null",
+      "type": "org.apache.ibatis.type.JdbcType",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.key-generator-names",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.key-generators",
+      "type": "java.util.Collection<org.apache.ibatis.executor.keygen.KeyGenerator>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.lazy-load-trigger-methods",
+      "type": "java.util.Set<java.lang.String>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.lazy-loading-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.local-cache-scope",
+      "type": "org.apache.ibatis.session.LocalCacheScope",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.log-impl",
+      "type": "java.lang.Class<? extends org.apache.ibatis.logging.Log>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.log-prefix",
+      "type": "java.lang.String",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.map-underscore-to-camel-case",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.mapped-statement-names",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.mapped-statements",
+      "type": "java.util.Collection<org.apache.ibatis.mapping.MappedStatement>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.multiple-result-sets-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.object-factory",
+      "type": "org.apache.ibatis.reflection.factory.ObjectFactory",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.object-wrapper-factory",
+      "type": "org.apache.ibatis.reflection.wrapper.ObjectWrapperFactory",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.parameter-map-names",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.parameter-maps",
+      "type": "java.util.Collection<org.apache.ibatis.mapping.ParameterMap>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.proxy-factory",
+      "type": "org.apache.ibatis.executor.loader.ProxyFactory",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.reflector-factory",
+      "type": "org.apache.ibatis.reflection.ReflectorFactory",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.result-map-names",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.result-maps",
+      "type": "java.util.Collection<org.apache.ibatis.mapping.ResultMap>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.return-instance-for-empty-row",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.safe-result-handler-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.safe-row-bounds-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.sql-fragments",
+      "type": "java.util.Map<java.lang.String,org.apache.ibatis.parsing.XNode>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.use-actual-param-name",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.use-column-label",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.use-generated-keys",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.variables",
+      "type": "java.util.Properties",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.configuration.vfs-impl",
+      "type": "java.lang.Class<? extends org.apache.ibatis.io.VFS>",
+      "sourceType": "org.apache.ibatis.session.Configuration"
+    },
+    {
+      "name": "api.boot.enhance.executor-type",
+      "type": "org.apache.ibatis.session.ExecutorType",
+      "description": "Execution mode for {@link org.mybatis.spring.SqlSessionTemplate}.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties"
+    },
+    {
+      "name": "api.boot.enhance.mapper-locations",
+      "type": "java.lang.String[]",
+      "description": "Locations of MyBatis mapper files.",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties",
+      "defaultValue": [
+        "classpath:mappers\/*.xml"
+      ]
+    },
+    {
+      "name": "api.boot.enhance.type-aliases-package",
+      "type": "java.lang.String",
+      "description": "Packages to search type aliases. (Package delimiters are \",; \\t\\n\")",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties"
+    },
+    {
+      "name": "api.boot.enhance.type-handlers-package",
+      "type": "java.lang.String",
+      "description": "Packages to search for type handlers. (Package delimiters are \",; \\t\\n\")",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties"
+    },
+    {
+      "name": "api.boot.pageable.dialect",
+      "type": "com.gitee.hengboy.mybatis.pageable.common.enums.DialectEnum",
+      "description": "数据库方言 默认使用mysql数据库方言",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.pageable.ApiBootMyBatisPageableProperties"
+    },
+    {
+      "name": "api.boot.pageable.properties",
+      "type": "java.util.Properties",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.pageable.ApiBootMyBatisPageableProperties"
+    },
     {
       "name": "beihu.data.mongodb.authentication-database",
       "type": "java.lang.String",
@@ -103,6 +435,13 @@
       "type": "java.lang.String",
       "sourceType": "ltd.beihu.core.boot.autoconfigure.redis.BeihuRedisProperties",
       "defaultValue": "p_"
+    },
+    {
+      "name": "api.boot.enhance.config",
+      "type": "java.lang.String",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceProperties",
+      "deprecated": true,
+      "deprecation": {}
     }
   ],
   "hints": []

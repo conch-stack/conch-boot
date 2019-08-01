@@ -17,6 +17,9 @@
 
     <modules>
         <module>beihu-boot-mongo-sample</module>
+        <module>beihu-boot-redis-sample</module>
+        <module>beihu-boot-web-sample</module>
+        <module>beihu-boot-mybatis-sample</module>
     </modules>
     <dependencies>
         <dependency>
@@ -36,4 +39,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 </project>

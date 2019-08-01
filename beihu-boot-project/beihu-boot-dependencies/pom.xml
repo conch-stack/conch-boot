@@ -9,7 +9,6 @@
         <version>3.1.4</version>
     </parent>
 
-
     <groupId>ltd.beihu.core</groupId>
     <artifactId>beihu-boot-dependencies</artifactId>
     <packaging>pom</packaging>
@@ -35,11 +34,26 @@
         <reflections.version>0.9.11</reflections.version>
         <redisson.version>3.11.1</redisson.version>
         <retrofit.version>2.3.0</retrofit.version>
+        <quartz.version>2.3.1</quartz.version>
+        <druid.version>1.1.17</druid.version>
+        <druid.starter.version>1.1.17</druid.starter.version>
+        <code.builder.core.version>1.0.5.RELEASE</code.builder.core.version>
+        <mysema.codegen.version>0.6.8</mysema.codegen.version>
+        <security.oauth2.version>2.3.5.RELEASE</security.oauth2.version>
+        <spring.security.jwt.version>1.0.10.RELEASE</spring.security.jwt.version>
+        <mybatis.pageable.core.version>1.0.7.RELEASE</mybatis.pageable.core.version>
+        <mybatis.enhance.core.version>1.1.1.RELEASE</mybatis.enhance.core.version>
+        <mybatis.enhance.dsl.version>1.1.1.RELEASE</mybatis.enhance.dsl.version>
 
         <!--maven plugin-->
         <maven.staging.plugin>1.6.7</maven.staging.plugin>
         <maven.gpg.pluign>1.5</maven.gpg.pluign>
-
+        <maven-plugin-api.version>3.6.1</maven-plugin-api.version>
+        <maven-plugin-annotations.version>3.6.0</maven-plugin-annotations.version>
+        <maven-plugin-plugin.version>3.6.0</maven-plugin-plugin.version>
+        <!--Plugin Versions-->
+        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+        <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -70,6 +84,11 @@
                 <artifactId>web-beihu-boot</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>datasource-beihu-boot</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
 
             <!-- starter-->
             <dependency>
@@ -85,6 +104,21 @@
             <dependency>
                 <groupId>ltd.beihu.core</groupId>
                 <artifactId>web-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>mybatis-pageable-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>mybatis-enhance-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>datasource-beihu-boot-starter</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
 
@@ -124,7 +158,107 @@
                 <artifactId>converter-jackson</artifactId>
                 <version>${retrofit.version}</version>
             </dependency>
+
+            <!-- Api Boot -->
+            <!--ApiBoot Code Builder-->
+            <dependency>
+                <groupId>com.gitee.hengboy</groupId>
+                <artifactId>code-builder-core</artifactId>
+                <version>${code.builder.core.version}</version>
+            </dependency>
+            <!--Maven Plugin-->
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-plugin-api</artifactId>
+                <version>${maven-plugin-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-annotations</artifactId>
+                <version>${maven-plugin-annotations.version}</version>
+            </dependency>
+            <!--ApiBoot Mybatis Pageable-->
+            <dependency>
+                <groupId>com.gitee.hengboy</groupId>
+                <artifactId>mybatis-pageable-core</artifactId>
+                <version>${mybatis.pageable.core.version}</version>
+            </dependency>
+            <!--ApiBoot Mybatis Enhance-->
+            <dependency>
+                <groupId>com.gitee.hengboy</groupId>
+                <artifactId>mybatis-enhance-core</artifactId>
+                <version>${mybatis.enhance.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.gitee.hengboy</groupId>
+                <artifactId>mybatis-enhance-dsl</artifactId>
+                <version>${mybatis.enhance.dsl.version}</version>
+            </dependency>
+            <!--Codegen-->
+            <dependency>
+                <groupId>com.mysema.codegen</groupId>
+                <artifactId>codegen</artifactId>
+                <version>${mysema.codegen.version}</version>
+            </dependency>
+            <!--druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!--druid starter-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.starter.version}</version>
+            </dependency>
+            <!--ApiBoot & Quartz-->
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+            <!--ApiBoot Security-->
+            <dependency>
+                <groupId>org.springframework.security.oauth</groupId>
+                <artifactId>spring-security-oauth2</artifactId>
+                <version>${security.oauth2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-jwt</artifactId>
+                <version>${spring.security.jwt.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <!--plugin management-->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>${build-helper-maven-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-plugin-plugin</artifactId>
+                    <version>${maven-plugin-plugin.version}</version>
+                </plugin>
+                <!--ApiBoot Mybatis Enhance Codegen-->
+                <plugin>
+                    <groupId>ltd.beihu.core</groupId>
+                    <artifactId>beihu-boot-mybatis-enhance-maven-codegen</artifactId>
+                    <version>${beihu.boot.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>

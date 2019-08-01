@@ -17,6 +17,7 @@
 		<module>beihu-boot-core</module>
 		<module>beihu-boot-autoconfigure</module>
 		<module>beihu-boot-starters</module>
+		<module>beihu-boot-maven-plugins</module>
 	</modules>
 
 	<properties>

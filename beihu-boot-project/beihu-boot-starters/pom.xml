@@ -18,6 +18,11 @@
 
     <modules>
         <module>mongo-beihu-boot-starter</module>
+        <module>redis-beihu-boot-starter</module>
+        <module>web-beihu-boot-starter</module>
+        <module>mybatis-enhance-beihu-boot-starter</module>
+        <module>mybatis-pageable-beihu-boot-starter</module>
+        <module>datasource-beihu-boot-starter</module>
     </modules>
 
 </project>

@@ -60,6 +60,79 @@
 			<artifactId>web-beihu-boot</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>ltd.beihu.core</groupId>
+			<artifactId>datasource-beihu-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--spring web-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--Spring Boot Redis-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--spring boot security-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--security oauth2-->
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--jwt-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--ApiBoot DataSource Switch-->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--ApiBoot Mybatis Pageable-->
+		<dependency>
+			<groupId>com.gitee.hengboy</groupId>
+			<artifactId>mybatis-pageable-core</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--ApiBoot Mybatis Enhance-->
+		<dependency>
+			<groupId>com.gitee.hengboy</groupId>
+			<artifactId>mybatis-enhance-core</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.gitee.hengboy</groupId>
+			<artifactId>mybatis-enhance-dsl</artifactId>
+			<optional>true</optional>
+		</dependency>
+
 	</dependencies>
 
 </project>
