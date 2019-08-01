@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import ltc.beihu.core.redis.boot.RedisGenericUtil;
 import ltc.beihu.core.redis.boot.RedisSerializers;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -20,6 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
+@ConditionalOnClass(RedisGenericUtil.class)
 @EnableConfigurationProperties(BeihuRedisProperties.class)
 @AutoConfigureAfter(RedisAutoConfiguration.class)
 public class BeihuRedisAutoConfiguration {

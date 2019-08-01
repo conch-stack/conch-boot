@@ -1,0 +1,16 @@
+ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoDataAutoConfiguration$AnyMongoClientAvailable.class
+META-INF/spring-configuration-metadata.json
+ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoDataAutoConfiguration$AnyMongoClientAvailable$FallbackClientAvailable.class
+ltd/beihu/core/boot/autoconfigure/redis/BeihuRedisProperties.class
+ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoAutoConfiguration.class
+ltd/beihu/core/boot/autoconfigure/mail/MailSenderProperties.class
+ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoClientFactory.class
+ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoDataAutoConfiguration$AnyMongoClientAvailable$PreferredClientAvailable.class
+ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoProperties.class
+ltd/beihu/core/boot/autoconfigure/mail/MailAutoConfiguration.class
+ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoDataAutoConfiguration$GridFsMongoDbFactory.class
+ltd/beihu/core/boot/autoconfigure/redis/BeihuRedisAutoConfiguration$CustomRedisSerializer.class
+META-INF/spring-autoconfigure-metadata.properties
+ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoDataAutoConfiguration.class
+ltd/beihu/core/boot/autoconfigure/redis/BeihuRedisAutoConfiguration.class
+ltd/beihu/core/boot/autoconfigure/redis/BeihuRedissonConfiguration.class

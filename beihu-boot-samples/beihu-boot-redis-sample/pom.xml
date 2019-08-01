@@ -30,10 +30,6 @@
             <groupId>ltd.beihu.core</groupId>
             <artifactId>redis-beihu-boot-starter</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

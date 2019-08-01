@@ -34,6 +34,7 @@
         <guava.version>28.0-jre</guava.version>
         <reflections.version>0.9.11</reflections.version>
         <redisson.version>3.11.1</redisson.version>
+        <retrofit.version>2.3.0</retrofit.version>
 
         <!--maven plugin-->
         <maven.staging.plugin>1.6.7</maven.staging.plugin>
@@ -64,6 +65,11 @@
                 <artifactId>redis-beihu-boot</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>web-beihu-boot</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
 
             <!-- starter-->
             <dependency>
@@ -74,6 +80,11 @@
             <dependency>
                 <groupId>ltd.beihu.core</groupId>
                 <artifactId>redis-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>web-beihu-boot-starter</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
 
@@ -97,6 +108,21 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson</artifactId>
                 <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>retrofit</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>adapter-java8</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-jackson</artifactId>
+                <version>${retrofit.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,0 +1,10 @@
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoAutoConfiguration.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/mongo/package-info.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/redis/BeihuRedisProperties.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoProperties.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoClientFactory.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/redis/BeihuRedissonConfiguration.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/mongo/BeihuMongoDataAutoConfiguration.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/redis/BeihuRedisAutoConfiguration.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/mail/MailAutoConfiguration.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-autoconfigure/src/main/java/ltd/beihu/core/boot/autoconfigure/mail/MailSenderProperties.java

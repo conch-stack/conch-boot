@@ -6,6 +6,11 @@
       "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
     },
     {
+      "name": "beihu.mail",
+      "type": "ltd.beihu.core.boot.autoconfigure.mail.MailSenderProperties",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mail.MailSenderProperties"
+    },
+    {
       "name": "spring.redis.beihu",
       "type": "ltd.beihu.core.boot.autoconfigure.redis.BeihuRedisProperties",
       "sourceType": "ltd.beihu.core.boot.autoconfigure.redis.BeihuRedisProperties"
@@ -71,6 +76,21 @@
       "type": "java.lang.String",
       "description": "Login user of the mongo server. Cannot be set with URI.",
       "sourceType": "ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoProperties"
+    },
+    {
+      "name": "beihu.mail.prefix",
+      "type": "java.lang.String",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mail.MailSenderProperties"
+    },
+    {
+      "name": "beihu.mail.send-from",
+      "type": "java.lang.String",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mail.MailSenderProperties"
+    },
+    {
+      "name": "beihu.mail.send-to",
+      "type": "java.lang.String",
+      "sourceType": "ltd.beihu.core.boot.autoconfigure.mail.MailSenderProperties"
     },
     {
       "name": "spring.redis.beihu.lock",
