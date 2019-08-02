@@ -72,7 +72,7 @@ public class SystemUserService {
     }
 
     /**
-     * 自定义返回类型
+     * 自定义返回类型 可用户 VO 返回
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class SystemUserService {
      *
      * @return
      */
-    public Integer avg() {
+    public Double avg() {
         // 系统用户动态查询实体
         DSystemUser dSystemUser = DSystemUser.DSL();
         return dslFactory.createSearchable()
@@ -144,7 +144,7 @@ public class SystemUserService {
                 // 用户状态为1
                 .where(dSystemUser.status.eq(1))
                 // 返回值类型为Integer，根据age对应表内字段而定
-                .resultType(Integer.class)
+                .resultType(Double.class)
                 // 查询单个结果
                 .fetchOne();
     }

@@ -94,7 +94,7 @@ public class ApiBootEnhanceSampleTest {
 
     @Test
     public void avg() {
-        Integer avg = systemUserService.avg();
+        Double avg = systemUserService.avg();
         logger.info("年龄平均值：{}", avg);
     }
 
