@@ -148,6 +148,7 @@ ltd/beihu/core/tools/host/HostInfo.class
 ltd/beihu/core/tools/security/SecurityUtils.class
 ltd/beihu/core/tools/template/store/cacheable/FileTemplateStore.class
 ltd/beihu/core/tools/spi/ClassLoaderUtil$1.class
+ltd/beihu/core/tools/enums/YesOrNo.class
 ltd/beihu/core/tools/utils/MosaicUtils$MosaicBuild.class
 ltd/beihu/core/tools/utils/FileUtils.class
 ltd/beihu/core/tools/threadExtension/SingleExecutorService$1.class

@@ -65,6 +65,16 @@
 			<artifactId>datasource-beihu-boot</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>ltd.beihu.core</groupId>
+			<artifactId>security-beihu-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>ltd.beihu.core</groupId>
+			<artifactId>oauth-beihu-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 		<!--spring web-->
 		<dependency>

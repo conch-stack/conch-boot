@@ -83,7 +83,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <execute>true</execute>
+                    <execute>false</execute>
                     <dbName>test</dbName>
                     <dbUrl>jdbc:mysql://192.168.2.44:3307</dbUrl>
                     <dbUserName>root</dbUserName>

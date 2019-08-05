@@ -1,0 +1,5 @@
+ltd/beihu/core/oauthbeihuboot/grant/DefaultApiBootOauthTokenGranter.class
+ltd/beihu/core/oauthbeihuboot/grant/ApiBootOauthTokenGranter.class
+ltd/beihu/core/oauthbeihuboot/exception/ApiBootTokenException.class
+ltd/beihu/core/oauthbeihuboot/ApiBootAuthorizationServerConfiguration$1.class
+ltd/beihu/core/oauthbeihuboot/ApiBootAuthorizationServerConfiguration.class

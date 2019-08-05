@@ -1,0 +1,9 @@
+ltd/beihu/core/beihubootmybatissample/dsl/DSystemUser.class
+ltd/beihu/core/beihubootmybatissample/mapper/SystemUserRoleMapper.class
+ltd/beihu/core/beihubootmybatissample/dsl/DSystemUserRole.class
+ltd/beihu/core/beihubootmybatissample/entity/SystemUserRole.class
+ltd/beihu/core/beihubootmybatissample/service/SystemUserService.class
+ltd/beihu/core/beihubootmybatissample/mapper/SystemUserMapper.class
+ltd/beihu/core/beihubootmybatissample/dto/SystemUserDTO.class
+ltd/beihu/core/beihubootmybatissample/entity/SystemUser.class
+ltd/beihu/core/beihubootmybatissample/BeihuBootMybatisSampleApplication.class

@@ -24,6 +24,7 @@
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/tools-beihu-boot/src/main/java/ltd/beihu/core/tools/utils/Assert.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/tools-beihu-boot/src/main/java/ltd/beihu/core/tools/utils/ListUtils.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/tools-beihu-boot/src/main/java/ltd/beihu/core/tools/functions/Functions.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/tools-beihu-boot/src/main/java/ltd/beihu/core/tools/enums/YesOrNo.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/tools-beihu-boot/src/main/java/ltd/beihu/core/tools/template/store/cacheable/FileTemplateStore.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/tools-beihu-boot/src/main/java/ltd/beihu/core/tools/functions/ThrowableIntFunction.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/tools-beihu-boot/src/main/java/ltd/beihu/core/tools/transmission/PeakTransmission.java

@@ -17,6 +17,7 @@
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/web-beihu-boot/src/main/java/ltd/beihu/core/web/boot/http/RetrofitUtil.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/web-beihu-boot/src/main/java/ltd/beihu/core/web/boot/http/FastJsonConverterFactory.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/web-beihu-boot/src/main/java/ltd/beihu/core/web/boot/code/ServiceCode.java
+/Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/web-beihu-boot/src/main/java/ltd/beihu/core/web/boot/event/LoadUserEvent.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/web-beihu-boot/src/main/java/ltd/beihu/core/web/boot/code/AbstractServiceCode.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/web-beihu-boot/src/main/java/ltd/beihu/core/web/boot/exception/ServiceExceptionHandler.java
 /Users/zhengjinzhou/project/beihu-boot/beihu-boot-project/beihu-boot-core/web-beihu-boot/src/main/java/ltd/beihu/core/web/boot/response/page/PageResponse.java

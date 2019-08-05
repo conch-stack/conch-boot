@@ -18,5 +18,7 @@
         <module>redis-beihu-boot</module>
         <module>web-beihu-boot</module>
         <module>datasource-beihu-boot</module>
+        <module>oauth-beihu-boot</module>
+        <module>security-beihu-boot</module>
     </modules>
 </project>

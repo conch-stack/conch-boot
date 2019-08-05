@@ -27,3 +27,4 @@ ltd/beihu/core/web/boot/http/FastJsonConverterFactory.class
 ltd/beihu/core/web/boot/exception/DefaultErrorController.class
 ltd/beihu/core/web/boot/exception/ServiceException.class
 ltd/beihu/core/web/boot/exception/ServiceExceptionHandler.class
+ltd/beihu/core/web/boot/event/LoadUserEvent.class
