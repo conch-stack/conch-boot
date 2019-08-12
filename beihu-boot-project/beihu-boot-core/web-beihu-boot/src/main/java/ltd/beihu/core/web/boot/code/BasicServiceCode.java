@@ -14,7 +14,7 @@ public enum BasicServiceCode implements ServiceCode {
     ERROR(10001, "SYSTEM_EXCEPTION", "系统异常"),
     FAILED(10002, "FAILED", "请求失败"),
 
-    PAGE_INDEX_ERROR(10003, "PAGE_INDEX_ERROR", "页码必须大于0"),
+    PAGE_INDEX_ERROR(30000, "PAGE_INDEX_ERROR", "页码必须大于0"),
 
     // 全局
     UNAUTHORIZED(401, "NO_AUTH", "未授权"),

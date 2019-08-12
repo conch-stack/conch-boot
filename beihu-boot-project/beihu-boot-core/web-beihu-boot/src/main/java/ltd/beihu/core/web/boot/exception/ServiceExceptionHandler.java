@@ -1,5 +1,6 @@
 package ltd.beihu.core.web.boot.exception;
 
+import com.gitee.hengboy.mybatis.pageable.common.exception.PageableException;
 import com.google.common.base.Throwables;
 import ltd.beihu.core.web.boot.code.BasicServiceCode;
 import ltd.beihu.core.web.boot.mail.DefaultMailSender;
@@ -35,6 +36,16 @@ public class ServiceExceptionHandler {
 		LOGGER.error("【ServiceExceptionHandler - ServiceException】\r\n [{}]", stackTraceAsString);
 		defaultMailSender.warn("【服务异常】", stackTraceAsString);
 		return BasicResponse.error(e);
+	}
+
+	/**
+	 * 分页异常
+	 */
+	@ExceptionHandler(PageableException.class)
+	public JsonResponse handleServiceException(PageableException e){
+		String stackTraceAsString = Throwables.getStackTraceAsString(e);
+		LOGGER.error("【ServiceExceptionHandler - ServiceException】\r\n [{}]", stackTraceAsString);
+		return BasicResponse.error(BasicServiceCode.PAGE_INDEX_ERROR);
 	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)

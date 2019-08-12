@@ -32,6 +32,21 @@ public class PageResponse<T> extends AbstractJsonResponse {
         return response;
     }
 
+    public static <T> PageResponse<T> createEnhance(com.gitee.hengboy.mybatis.pageable.Page<T> page) {
+        PageResponse<T> response = new PageResponse<>();
+        response.data = page.getData();
+        response.index = page.getPageIndex();
+        response.size = page.getPageSize();
+        response.count = page.getTotalElements();
+        response.pageCount = page.getTotalPages();
+
+        response.message = BasicServiceCode.SUCCESS.getMesg();
+        response.codeDescription = BasicServiceCode.SUCCESS.getDesc();
+        response.code = BasicServiceCode.SUCCESS.getCode();
+
+        return response;
+    }
+
     public JsonResponse error() {
         this.message = BasicServiceCode.FAILED.getMesg();
         this.codeDescription = BasicServiceCode.FAILED.getDesc();

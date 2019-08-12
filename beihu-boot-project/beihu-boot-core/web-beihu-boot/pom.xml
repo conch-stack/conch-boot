@@ -5,7 +5,7 @@
     <parent>
         <groupId>ltd.beihu.core</groupId>
         <artifactId>beihu-boot-core</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>web-beihu-boot</artifactId>
@@ -63,6 +63,10 @@
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>converter-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.gitee.hengboy</groupId>
+            <artifactId>mybatis-pageable-core</artifactId>
         </dependency>
     </dependencies>
 

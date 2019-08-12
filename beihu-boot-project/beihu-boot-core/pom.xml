@@ -5,7 +5,7 @@
     <parent>
         <groupId>ltd.beihu.core</groupId>
         <artifactId>beihu-boot-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../beihu-boot-parent</relativePath>
     </parent>
 
@@ -20,5 +20,6 @@
         <module>datasource-beihu-boot</module>
         <module>oauth-beihu-boot</module>
         <module>security-beihu-boot</module>
+        <module>security-enhance-beihu-boot</module>
     </modules>
 </project>
