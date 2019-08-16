@@ -5,7 +5,7 @@
     <parent>
         <groupId>ltd.beihu.core</groupId>
         <artifactId>beihu-boot-starters</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </parent>
     <artifactId>security-oauth-jwt-beihu-boot-starter</artifactId>
 

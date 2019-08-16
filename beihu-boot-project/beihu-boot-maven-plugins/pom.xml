@@ -5,7 +5,7 @@
     <parent>
         <groupId>ltd.beihu.core</groupId>
         <artifactId>beihu-boot-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
         <relativePath>../beihu-boot-parent</relativePath>
     </parent>
     <artifactId>beihu-boot-maven-plugins</artifactId>

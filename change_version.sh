@@ -35,4 +35,6 @@ done
 
 echo "!!!!! end and you need to change: beihu-boot-dependencies version"
 echo "!!!!! sofaboot-dependencies -> <version>3.1.4</version>"
-echo "!!!!! beihu-boot-dependencies -> <version>1.0.1</version>"
+echo "!!!!! beihu-boot-dependencies -> <version>$1</version>"
+echo "!!!!! properties -> <beihu.boot.version>$1</beihu.boot.version>"
+echo "!!!!! beihu-boot-mybatis-sample -> beihu-boot-mybatis-enhance-maven-codegen -> <version>$1</version>"
