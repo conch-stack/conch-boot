@@ -1,5 +1,0 @@
-ltc/beihu/core/redis/boot/RedisGenericUtil.class
-ltc/beihu/core/redis/boot/AbstractRedisUtil.class
-ltc/beihu/core/redis/boot/RedisSerializers.class
-ltc/beihu/core/redis/boot/redisson/RedissonUtils.class
-ltc/beihu/core/redis/boot/MessageListener.class

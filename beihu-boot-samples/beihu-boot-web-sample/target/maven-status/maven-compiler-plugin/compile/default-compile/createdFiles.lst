@@ -1,8 +1,0 @@
-ltd/beihu/core/beihubootwebsample/BeihuBootWebSampleApplication.class
-ltd/beihu/core/beihubootwebsample/config/BlackListAutoConfiguration.class
-ltd/beihu/core/beihubootwebsample/http/TestHttpRs.class
-ltd/beihu/core/beihubootwebsample/TestCtrl.class
-ltd/beihu/core/beihubootwebsample/http/TestHttpDto.class
-ltd/beihu/core/beihubootwebsample/config/HttpProperties.class
-ltd/beihu/core/beihubootwebsample/http/TestHttpClient.class
-META-INF/spring-autoconfigure-metadata.properties

@@ -1,9 +1,0 @@
-/Users/zhengjinzhou/project/beihu-boot/beihu-boot-samples/beihu-boot-mybatis-sample/src/main/java/ltd/beihu/core/beihubootmybatissample/entity/SystemUser.java
-/Users/zhengjinzhou/project/beihu-boot/beihu-boot-samples/beihu-boot-mybatis-sample/src/main/java/ltd/beihu/core/beihubootmybatissample/dsl/DSystemUserRole.java
-/Users/zhengjinzhou/project/beihu-boot/beihu-boot-samples/beihu-boot-mybatis-sample/src/main/java/ltd/beihu/core/beihubootmybatissample/entity/SystemUserRole.java
-/Users/zhengjinzhou/project/beihu-boot/beihu-boot-samples/beihu-boot-mybatis-sample/src/main/java/ltd/beihu/core/beihubootmybatissample/BeihuBootMybatisSampleApplication.java
-/Users/zhengjinzhou/project/beihu-boot/beihu-boot-samples/beihu-boot-mybatis-sample/src/main/java/ltd/beihu/core/beihubootmybatissample/dto/SystemUserDTO.java
-/Users/zhengjinzhou/project/beihu-boot/beihu-boot-samples/beihu-boot-mybatis-sample/src/main/java/ltd/beihu/core/beihubootmybatissample/service/SystemUserService.java
-/Users/zhengjinzhou/project/beihu-boot/beihu-boot-samples/beihu-boot-mybatis-sample/src/main/java/ltd/beihu/core/beihubootmybatissample/mapper/SystemUserRoleMapper.java
-/Users/zhengjinzhou/project/beihu-boot/beihu-boot-samples/beihu-boot-mybatis-sample/src/main/java/ltd/beihu/core/beihubootmybatissample/dsl/DSystemUser.java
-/Users/zhengjinzhou/project/beihu-boot/beihu-boot-samples/beihu-boot-mybatis-sample/src/main/java/ltd/beihu/core/beihubootmybatissample/mapper/SystemUserMapper.java

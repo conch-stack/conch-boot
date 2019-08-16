@@ -31,7 +31,7 @@ public class BasicResponse<T> extends AbstractJsonResponse {
         return response;
     }
 
-    public static <T> BasicResponse<T> success(T data, BasicServiceCode code) {
+    public static <T> BasicResponse<T> success(T data, ServiceCode code) {
         BasicResponse<T> response = new BasicResponse<>();
         response.data = data;
         response.message = code.getMesg();
