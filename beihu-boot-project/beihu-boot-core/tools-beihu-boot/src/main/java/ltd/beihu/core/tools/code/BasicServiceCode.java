@@ -1,4 +1,4 @@
-package ltd.beihu.core.web.boot.code;
+package ltd.beihu.core.tools.code;
 
 import java.util.stream.Stream;
 

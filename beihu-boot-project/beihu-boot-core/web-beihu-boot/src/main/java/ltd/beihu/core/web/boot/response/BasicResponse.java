@@ -1,7 +1,7 @@
 package ltd.beihu.core.web.boot.response;
 
-import ltd.beihu.core.web.boot.code.BasicServiceCode;
-import ltd.beihu.core.web.boot.code.ServiceCode;
+import ltd.beihu.core.tools.code.BasicServiceCode;
+import ltd.beihu.core.tools.code.ServiceCode;
 
 /**
  * @Author: zjz

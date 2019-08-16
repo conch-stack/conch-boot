@@ -22,9 +22,12 @@
 
         <beihu.boot.version>1.0.0</beihu.boot.version>
 
-        <!--starter-->
+        <!-- sofa -->
+        <registry.client.version>5.2.0</registry.client.version>
 
         <!--core-->
+
+        <!--starter-->
 
         <!--2rd lib dependency-->
 
@@ -100,6 +103,12 @@
                 <version>${beihu.boot.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>registry-client-all</artifactId>
+                <version>${registry.client.version}</version>
+            </dependency>
+
             <!-- starter-->
             <dependency>
                 <groupId>ltd.beihu.core</groupId>
@@ -172,6 +181,26 @@
                 <groupId>com.squareup.retrofit2</groupId>
                 <artifactId>converter-jackson</artifactId>
                 <version>${retrofit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jdk8</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-parameter-names</artifactId>
+                <version>${jackson.version}</version>
             </dependency>
 
             <!-- Api Boot -->

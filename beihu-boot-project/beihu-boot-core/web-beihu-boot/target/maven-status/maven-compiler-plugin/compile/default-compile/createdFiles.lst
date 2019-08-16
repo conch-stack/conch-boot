@@ -4,10 +4,7 @@ ltd/beihu/core/web/boot/utils/RandomMacAddress.class
 ltd/beihu/core/web/boot/response/AbstractJsonResponse.class
 ltd/beihu/core/web/boot/mail/DefaultMailSender.class
 ltd/beihu/core/web/boot/utils/PageUtil.class
-ltd/beihu/core/web/boot/code/DefaultServiceCode.class
 ltd/beihu/core/web/boot/response/page/Page.class
-ltd/beihu/core/web/boot/code/AbstractServiceCode.class
-ltd/beihu/core/web/boot/code/ServiceCode.class
 ltd/beihu/core/web/boot/http/FastJsonRequestBodyConverter.class
 ltd/beihu/core/web/boot/http/HttpLogInterceptor.class
 ltd/beihu/core/web/boot/http/CallUtil.class
@@ -15,7 +12,6 @@ ltd/beihu/core/web/boot/utils/RandomValueUtil.class
 ltd/beihu/core/web/boot/http/RetrofitUtil.class
 ltd/beihu/core/web/boot/utils/RandomUserAgent.class
 ltd/beihu/core/web/boot/response/page/PageResult.class
-ltd/beihu/core/web/boot/code/BasicServiceCode.class
 ltd/beihu/core/web/boot/mail/AbstarctMailSender.class
 ltd/beihu/core/web/boot/response/page/PageResponse.class
 ltd/beihu/core/web/boot/mail/BeihuMailSender.class

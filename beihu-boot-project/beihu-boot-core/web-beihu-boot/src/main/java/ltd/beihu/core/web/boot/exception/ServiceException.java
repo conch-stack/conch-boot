@@ -1,7 +1,7 @@
 package ltd.beihu.core.web.boot.exception;
 
-import ltd.beihu.core.web.boot.code.DefaultServiceCode;
-import ltd.beihu.core.web.boot.code.ServiceCode;
+import ltd.beihu.core.tools.code.DefaultServiceCode;
+import ltd.beihu.core.tools.code.ServiceCode;
 
 import java.text.MessageFormat;
 

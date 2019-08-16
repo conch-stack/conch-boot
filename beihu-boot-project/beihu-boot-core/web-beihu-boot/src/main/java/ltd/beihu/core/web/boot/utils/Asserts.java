@@ -1,6 +1,6 @@
 package ltd.beihu.core.web.boot.utils;
 
-import ltd.beihu.core.web.boot.code.ServiceCode;
+import ltd.beihu.core.tools.code.ServiceCode;
 import ltd.beihu.core.web.boot.exception.ServiceException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;

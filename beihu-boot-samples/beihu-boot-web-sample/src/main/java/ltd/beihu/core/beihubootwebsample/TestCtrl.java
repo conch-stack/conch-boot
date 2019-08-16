@@ -3,7 +3,7 @@ package ltd.beihu.core.beihubootwebsample;
 import ltd.beihu.core.beihubootwebsample.http.TestHttpClient;
 import ltd.beihu.core.beihubootwebsample.http.TestHttpDto;
 import ltd.beihu.core.beihubootwebsample.http.TestHttpRs;
-import ltd.beihu.core.web.boot.code.BasicServiceCode;
+import ltd.beihu.core.tools.code.BasicServiceCode;
 import ltd.beihu.core.web.boot.exception.ServiceException;
 import ltd.beihu.core.web.boot.response.BasicResponse;
 import ltd.beihu.core.web.boot.response.JsonResponse;

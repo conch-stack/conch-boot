@@ -1,6 +1,6 @@
 package ltd.beihu.core.securitybeihuboot.handler;
 
-import ltd.beihu.core.web.boot.code.BasicServiceCode;
+import ltd.beihu.core.tools.code.BasicServiceCode;
 import ltd.beihu.core.web.boot.exception.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

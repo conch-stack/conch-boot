@@ -188,6 +188,7 @@ ltd/beihu/core/tools/template/store/cacheable/CompressTemplateStore.class
 ltd/beihu/core/tools/utils/RunsUtils$Retry.class
 ltd/beihu/core/tools/collections/BaseSmartStream.class
 ltd/beihu/core/tools/time/FastDatePrinter$TwelveHourField.class
+ltd/beihu/core/tools/code/DefaultServiceCode.class
 ltd/beihu/core/tools/spi/ClassLoaderUtil$ConstructorCache.class
 ltd/beihu/core/tools/threadExtension/single/SingleThread.class
 ltd/beihu/core/tools/time/FastDatePrinter$CharacterLiteral.class
@@ -198,6 +199,7 @@ ltd/beihu/core/tools/guard/DefaultGuard.class
 ltd/beihu/core/tools/spi/ServiceLoader$1.class
 ltd/beihu/core/tools/threadExtension/single/SingleRun.class
 ltd/beihu/core/tools/utils/NetAddressUtil.class
+ltd/beihu/core/tools/code/AbstractServiceCode.class
 ltd/beihu/core/tools/image/impl/VerifyCodeGenerator.class
 ltd/beihu/core/tools/time/FastDatePrinter$TimeZoneNameRule.class
 ltd/beihu/core/tools/utils/ReflectionUtils.class
@@ -232,6 +234,7 @@ ltd/beihu/core/tools/spi/ServiceLoader$URLDefinition.class
 ltd/beihu/core/tools/utils/MosaicUtils$MosaicExceptionHandle.class
 ltd/beihu/core/tools/utils/AnnotationUtils$AnnotationCacheKey.class
 ltd/beihu/core/tools/security/SecurityManager.class
+ltd/beihu/core/tools/code/BasicServiceCode.class
 ltd/beihu/core/tools/security/DecryptSupport.class
 ltd/beihu/core/tools/utils/Runs.class
 ltd/beihu/core/tools/functions/Functions$2.class
@@ -246,6 +249,7 @@ ltd/beihu/core/tools/template/TemplateFactory.class
 ltd/beihu/core/tools/utils/CollectionUtils.class
 ltd/beihu/core/tools/image/ImageGenerator.class
 ltd/beihu/core/tools/host/NetworkUtil$2.class
+ltd/beihu/core/tools/code/ServiceCode.class
 ltd/beihu/core/tools/threadExtension/SingleExecutorService.class
 ltd/beihu/core/tools/annotation/AnnotationAttributes.class
 ltd/beihu/core/tools/image/impl/SimpleImageGenerator$CodeUtil.class

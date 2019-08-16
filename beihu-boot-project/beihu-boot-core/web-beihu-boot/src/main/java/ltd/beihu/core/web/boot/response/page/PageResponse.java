@@ -1,6 +1,6 @@
 package ltd.beihu.core.web.boot.response.page;
 
-import ltd.beihu.core.web.boot.code.BasicServiceCode;
+import ltd.beihu.core.tools.code.BasicServiceCode;
 import ltd.beihu.core.web.boot.response.AbstractJsonResponse;
 import ltd.beihu.core.web.boot.response.JsonResponse;
 

@@ -1,7 +1,7 @@
 package ltd.beihu.core.web.boot.exception;
 
-import ltd.beihu.core.web.boot.code.BasicServiceCode;
-import ltd.beihu.core.web.boot.code.ServiceCode;
+import ltd.beihu.core.tools.code.BasicServiceCode;
+import ltd.beihu.core.tools.code.ServiceCode;
 import ltd.beihu.core.web.boot.response.BasicResponse;
 import ltd.beihu.core.web.boot.response.JsonResponse;
 import org.apache.commons.lang3.EnumUtils;

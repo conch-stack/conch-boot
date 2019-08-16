@@ -2,7 +2,7 @@ package ltd.beihu.core.web.boot.exception;
 
 import com.gitee.hengboy.mybatis.pageable.common.exception.PageableException;
 import com.google.common.base.Throwables;
-import ltd.beihu.core.web.boot.code.BasicServiceCode;
+import ltd.beihu.core.tools.code.BasicServiceCode;
 import ltd.beihu.core.web.boot.mail.DefaultMailSender;
 import ltd.beihu.core.web.boot.response.BasicResponse;
 import ltd.beihu.core.web.boot.response.JsonResponse;
@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -44,13 +45,13 @@ public class ServiceExceptionHandler {
 	@ExceptionHandler(PageableException.class)
 	public JsonResponse handleServiceException(PageableException e){
 		String stackTraceAsString = Throwables.getStackTraceAsString(e);
-		LOGGER.error("【ServiceExceptionHandler - ServiceException】\r\n [{}]", stackTraceAsString);
+		LOGGER.error("【ServiceExceptionHandler - PageableException】\r\n [{}]", stackTraceAsString);
 		return BasicResponse.error(BasicServiceCode.PAGE_INDEX_ERROR);
 	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public JsonResponse handleValidException(MethodArgumentNotValidException e){
-		LOGGER.error("【ServiceExceptionHandler - ServiceException】\r\n [{}]", Throwables.getStackTraceAsString(e));
+		LOGGER.error("【ServiceExceptionHandler - MethodArgumentNotValidException】\r\n [{}]", Throwables.getStackTraceAsString(e));
 		Iterator var2 = e.getBindingResult().getAllErrors().iterator();
 		StringBuilder sb = new StringBuilder();
 		if (var2.hasNext()) {
@@ -60,10 +61,17 @@ public class ServiceExceptionHandler {
 		return BasicResponse.error(new ServiceException(BasicServiceCode.BAD_REQUEST), sb.toString());
 	}
 
+	@ExceptionHandler(MissingServletRequestParameterException.class)
+	public JsonResponse handleServletRequestParmeException(MissingServletRequestParameterException e){
+		LOGGER.error("【ServiceExceptionHandler - MissingServletRequestParameterException】\r\n [{}]", Throwables.getStackTraceAsString(e));
+		return BasicResponse.error(new ServiceException(BasicServiceCode.BAD_REQUEST));
+	}
+
+
 	@ExceptionHandler(Exception.class)
 	public JsonResponse handleException(Exception e){
 		String stackTraceAsString = Throwables.getStackTraceAsString(e);
-		LOGGER.error("【ServiceExceptionHandler - ServiceException】\r\n [{}]", stackTraceAsString);
+		LOGGER.error("【ServiceExceptionHandler - Exception】\r\n [{}]", stackTraceAsString);
 		defaultMailSender.warn("【系统异常】", stackTraceAsString);
 		return BasicResponse.error(new ServiceException(BasicServiceCode.FAILED));
 	}
