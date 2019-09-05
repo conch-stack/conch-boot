@@ -76,6 +76,11 @@
 			<artifactId>oauth-beihu-boot</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>ltd.beihu.core</groupId>
+			<artifactId>minio-beihu-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 		<!--spring web-->
 		<dependency>

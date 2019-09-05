@@ -38,12 +38,18 @@ public class RetrofitUtil {
     }
 
     public static <T> T getClient(String baseURL, Class<T> clazz, boolean followRedirects) {
-        return getClient(baseURL, clazz, FastJsonConverterFactory.create(), getOkHttpBuilder(followRedirects).build());
+        return getClient(baseURL, clazz, FastJsonConverterFactory.create(), getOkHttpBuilder(followRedirects, false).build());
+    }
+    public static <T> T getClient(String baseURL, Class<T> clazz, boolean followRedirects, boolean log) {
+        return getClient(baseURL, clazz, FastJsonConverterFactory.create(), getOkHttpBuilder(followRedirects, log).build());
     }
 
 
     private static <T> T getClient(String baseURL, Class<T> clazz, Converter.Factory factory) {
-        return getClient(baseURL, clazz, factory, getOkHttpBuilder(true).build());
+        return getClient(baseURL, clazz, factory, getOkHttpBuilder(true, false).build());
+    }
+    private static <T> T getClient(String baseURL, Class<T> clazz, Converter.Factory factory, boolean log) {
+        return getClient(baseURL, clazz, factory, getOkHttpBuilder(true, log).build());
     }
 
     private static <T> T getClient(String baseURL, Class<T> clazz, Converter.Factory factory, OkHttpClient client) {
@@ -65,17 +71,20 @@ public class RetrofitUtil {
         return getClient(baseUrl, clazz, FastJsonConverterFactory.create(), getOkHttpsClient());
     }
 
-    private static OkHttpClient.Builder getOkHttpBuilder(boolean redirect) {
+    private static OkHttpClient.Builder getOkHttpBuilder(boolean redirect, boolean log) {
         Dispatcher dispatcher = new Dispatcher(HTTP_EXECUTOR);
-        return new OkHttpClient.Builder().dispatcher(dispatcher)
+        OkHttpClient.Builder builder = new OkHttpClient.Builder().dispatcher(dispatcher)
 //                .hostnameVerifier(SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER)
                 .followRedirects(redirect)
                 .followSslRedirects(redirect)
                 .readTimeout(HTTP_EXECUTOR.getKeepAliveTime(TimeUnit.SECONDS), TimeUnit.SECONDS)
                 .writeTimeout(HTTP_EXECUTOR.getKeepAliveTime(TimeUnit.SECONDS), TimeUnit.SECONDS)
                 .connectTimeout(HTTP_EXECUTOR.getKeepAliveTime(TimeUnit.SECONDS), TimeUnit.SECONDS)
-                .retryOnConnectionFailure(true)
-                .addInterceptor(new HttpLogInterceptor());
+                .retryOnConnectionFailure(true);
+        if (log) {
+            builder.addInterceptor(new HttpLogInterceptor());
+        }
+        return builder;
     }
 
     static OkHttpClient getOkHttps(File file, char[] password) {
@@ -93,6 +102,9 @@ public class RetrofitUtil {
     }
 
     private static OkHttpClient getOkHttpsClient(char[] password, KeyStore keyStore) {
+        return getOkHttpsClient(password, keyStore, false);
+    }
+    private static OkHttpClient getOkHttpsClient(char[] password, KeyStore keyStore, boolean log) {
         try {
             // 2.设置TrustManager
             TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
@@ -112,7 +124,7 @@ public class RetrofitUtil {
             SSLContext sslContext = SSLContext.getInstance("TLSv1");
             sslContext.init(keyManagers, trustManagers, new SecureRandom());
             SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
-            return getOkHttpBuilder(true).sslSocketFactory(sslSocketFactory, trustManager).build();
+            return getOkHttpBuilder(true, log).sslSocketFactory(sslSocketFactory, trustManager).build();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         } catch (KeyStoreException e) {
@@ -123,10 +135,12 @@ public class RetrofitUtil {
             e.printStackTrace();
         }
         return null;
-
     }
 
     private static OkHttpClient getOkHttpsClient() {
+        return getOkHttpsClient(false);
+    }
+    private static OkHttpClient getOkHttpsClient(boolean log) {
         try {
             //创建一个不验证证书链的证书信任管理器。
             final TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
@@ -161,7 +175,7 @@ public class RetrofitUtil {
             SSLContext sslContext = SSLContext.getInstance("TLSv1");
             sslContext.init(null, trustAllCerts, new SecureRandom());
             SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
-            return getOkHttpBuilder(true).sslSocketFactory(sslSocketFactory, trustManager).build();
+            return getOkHttpBuilder(true, log).sslSocketFactory(sslSocketFactory, trustManager).build();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         } catch (KeyStoreException e) {

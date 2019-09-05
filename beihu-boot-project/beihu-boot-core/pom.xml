@@ -21,5 +21,6 @@
         <module>oauth-beihu-boot</module>
         <module>security-beihu-boot</module>
         <module>security-enhance-beihu-boot</module>
+        <module>minio-beihu-boot</module>
     </modules>
 </project>

@@ -35,8 +35,23 @@ public class ServiceExceptionHandler {
 	public JsonResponse handleServiceException(ServiceException e){
 		String stackTraceAsString = Throwables.getStackTraceAsString(e);
 		LOGGER.error("【ServiceExceptionHandler - ServiceException】\r\n [{}]", stackTraceAsString);
-		defaultMailSender.warn("【服务异常】", stackTraceAsString);
+		if (e.getCode() == BasicServiceCode.ERROR.getCode()
+				|| e.getCode() == BasicServiceCode.FAILED.getCode()
+				|| e.getCode() == BasicServiceCode.METHOD_NOT_ALLOWED.getCode()
+				|| e.getCode() == BasicServiceCode.REJECT.getCode()
+				|| e.getCode() == BasicServiceCode.SERVER_ERROR.getCode()
+				|| e.getCode() == BasicServiceCode.SERVICE_UNAVAILABLE.getCode()
+				|| e.getCode() == BasicServiceCode.TIME_OUT.getCode()) {
+			defaultMailSender.warn("【服务异常】", stackTraceAsString);
+		}
 		return BasicResponse.error(e);
+	}
+
+	@ExceptionHandler(IllegalArgumentException.class)
+	protected JsonResponse handleIllegalArgumentError(IllegalArgumentException e) {
+		String stackTraceAsString = Throwables.getStackTraceAsString(e);
+		LOGGER.error("【ServiceExceptionHandler - ServiceException】\r\n [{}]", stackTraceAsString);
+		return BasicResponse.error(BasicServiceCode.BAD_REQUEST);
 	}
 
 	/**
