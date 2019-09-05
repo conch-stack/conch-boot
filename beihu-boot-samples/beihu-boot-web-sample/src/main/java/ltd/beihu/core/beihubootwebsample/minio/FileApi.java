@@ -3,6 +3,7 @@ package ltd.beihu.core.beihubootwebsample.minio;
 import io.minio.ObjectStat;
 import io.minio.errors.*;
 import io.minio.messages.Bucket;
+import io.minio.policy.PolicyType;
 import ltd.beihu.core.minio.boot.MinioTemplate;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
@@ -20,6 +21,7 @@ import java.io.InputStream;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/files")
@@ -79,14 +81,20 @@ public class FileApi {
     public void uploadFile(@PathVariable("bucketName") String bucketName,
                            @RequestParam("objectName") String objectName) throws IOException, InvalidKeyException,
             NoSuchAlgorithmException, InsufficientDataException, InvalidArgumentException, InternalException,
-            NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException, RegionConflictException, InvalidExpiresRangeException {
+            NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException, RegionConflictException, InvalidExpiresRangeException, InvalidObjectPrefixException {
 
-        minioTemplate.removeObject(bucketName, objectName);
+//        minioTemplate.removeObject(bucketName, objectName);
 
-        InputStream objectStream = minioTemplate.getObject(bucketName, objectName);
+//        InputStream objectStream = minioTemplate.getObject(bucketName, objectName);
+//
+//        System.out.println("remove");
 
-        System.out.println("remove");
+        minioTemplate.setBucketPolicy(bucketName, objectName, PolicyType.READ_ONLY);
 
+        Map<String, PolicyType> bucketPolicy = minioTemplate.getBucketPolicy(bucketName);
+        bucketPolicy.forEach((a, b) -> System.out.println(a + " | " + b.getValue()));
 
+        PolicyType bucketPolicy1 = minioTemplate.getBucketPolicy(bucketName, objectName);
+        System.out.println(objectName + " | " + bucketPolicy1.getValue());
     }
 }
