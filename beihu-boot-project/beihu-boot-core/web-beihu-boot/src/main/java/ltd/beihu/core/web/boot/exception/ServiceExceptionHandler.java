@@ -82,7 +82,6 @@ public class ServiceExceptionHandler {
 		return BasicResponse.error(new ServiceException(BasicServiceCode.BAD_REQUEST));
 	}
 
-
 	@ExceptionHandler(Exception.class)
 	public JsonResponse handleException(Exception e){
 		String stackTraceAsString = Throwables.getStackTraceAsString(e);

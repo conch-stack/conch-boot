@@ -19,6 +19,10 @@
             <groupId>ltd.beihu.core</groupId>
             <artifactId>web-beihu-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>ltd.beihu.core</groupId>
+            <artifactId>minio-beihu-boot-starter</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -15,12 +15,10 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties({ MinioProperties.class })
 public class MinioAutoConfiguration {
 
-    private MinioProperties properties;
-
     @Bean
-    @ConditionalOnMissingBean(MinioTemplate.class)
-    public MinioClient minioClient() throws InvalidPortException, InvalidEndpointException {
-        return new MinioClient(properties.getUrl(), properties.getAccessKey(), properties.getSecretKey());
+    @ConditionalOnMissingBean(MinioClient.class)
+    public MinioClient minioClient(MinioProperties minioProperties) throws InvalidPortException, InvalidEndpointException {
+        return new MinioClient(minioProperties.getUrl(), minioProperties.getAccessKey(), minioProperties.getSecretKey());
     }
 
     @Bean

@@ -20,10 +20,6 @@
             <groupId>io.minio</groupId>
             <artifactId>minio</artifactId>
         </dependency>
-        <dependency>
-            <groupId>ltd.beihu.core</groupId>
-            <artifactId>web-beihu-boot</artifactId>
-        </dependency>
         <!--Lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>

@@ -67,9 +67,9 @@ public class MinioTemplate {
         return getMinioClient().getObject(bucketName, objectName);
     }
 
-    public String getObjectUrl(String bucketName, String objectName) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
-        return getMinioClient().getObjectUrl(bucketName, objectName);
-    }
+//    public String getObjectUrl(String bucketName, String objectName) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
+//        return getMinioClient().getObjectUrl(bucketName, objectName);
+//    }
 
     public void removeObject(String bucketName, String objectName ) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException, InvalidArgumentException {
         getMinioClient().removeObject(bucketName, objectName);
