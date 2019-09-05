@@ -5,7 +5,7 @@
     <parent>
         <groupId>ltd.beihu.core</groupId>
         <artifactId>beihu-boot-dependencies</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
         <relativePath>../beihu-boot-dependencies</relativePath>
     </parent>
 
