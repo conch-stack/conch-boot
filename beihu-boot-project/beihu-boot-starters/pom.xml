@@ -24,6 +24,7 @@
         <module>mybatis-pageable-beihu-boot-starter</module>
         <module>datasource-beihu-boot-starter</module>
         <module>security-oauth-jwt-beihu-boot-starter</module>
+        <module>minio-beihu-boot-starter</module>
     </modules>
 
 </project>
