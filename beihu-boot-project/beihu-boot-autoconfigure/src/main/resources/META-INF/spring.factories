@@ -1,0 +1,12 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoDataAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.mongo.BeihuMongoAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.redis.BeihuRedisAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.redis.BeihuRedissonConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.mail.MailAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.pageable.ApiBootMybatisPageableAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.datasource.ApiBootDataSourceSwitchAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.minio.MinioAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.quartz.ApiBootQuartzAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.antiscrapy.AntiSecurityAutoConfiguration

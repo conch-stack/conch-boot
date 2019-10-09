@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ltd.beihu.core</groupId>
+        <artifactId>beihu-boot-parent</artifactId>
+        <version>1.0.3</version>
+        <relativePath>../beihu-boot-parent</relativePath>
+    </parent>
+
+    <artifactId>beihu-boot-core</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>mongo-beihu-boot</module>
+        <module>tools-beihu-boot</module>
+        <module>redis-beihu-boot</module>
+        <module>web-beihu-boot</module>
+        <module>datasource-beihu-boot</module>
+        <module>oauth-beihu-boot</module>
+        <module>security-beihu-boot</module>
+        <module>security-enhance-beihu-boot</module>
+        <module>minio-beihu-boot</module>
+        <module>quartz-beihu-boot</module>
+        <module>anti-scrapy-beihu-boot</module>
+    </modules>
+</project>

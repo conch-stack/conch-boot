@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ltd.beihu.core</groupId>
+        <artifactId>beihu-boot-core</artifactId>
+        <version>1.0.3</version>
+    </parent>
+    <artifactId>anti-scrapy-beihu-boot</artifactId>
+
+    <name>anti-scrapy-beihu-boot</name>
+    <description>简单过滤爬虫请求Security模块</description>
+
+    <properties>
+        <main.user.dir>${basedir}/../../..</main.user.dir>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>ltd.beihu.core</groupId>
+            <artifactId>redis-beihu-boot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ltd.beihu.core</groupId>
+            <artifactId>tools-beihu-boot</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

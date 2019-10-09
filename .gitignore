@@ -46,6 +46,9 @@ log/
 .flattened-pom.xml
 */.flattened-pom.xml
 */target/
+\target/
+*/*/target
+*/*/*/target
 */logs/
 */log/
 */bllog/

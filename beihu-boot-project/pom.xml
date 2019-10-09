@@ -5,14 +5,19 @@
 	<parent>
 		<groupId>ltd.beihu.core</groupId>
 		<artifactId>beihu-boot-build</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<version>1.0.3</version>
 	</parent>
 
 	<artifactId>beihu-boot-project</artifactId>
 	<packaging>pom</packaging>
 
 	<modules>
-
+		<module>beihu-boot-dependencies</module>
+		<module>beihu-boot-parent</module>
+		<module>beihu-boot-core</module>
+		<module>beihu-boot-autoconfigure</module>
+		<module>beihu-boot-starters</module>
+		<module>beihu-boot-maven-plugins</module>
 	</modules>
 
 	<properties>

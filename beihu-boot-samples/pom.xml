@@ -5,18 +5,39 @@
     <parent>
         <groupId>ltd.beihu.core</groupId>
         <artifactId>beihu-boot-build</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.3</version>
     </parent>
     <artifactId>beihu-boot-samples</artifactId>
     <packaging>pom</packaging>
 
     <properties>
         <main.user.dir>${basedir}/..</main.user.dir>
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
     <modules>
-
+        <module>beihu-boot-mongo-sample</module>
+        <module>beihu-boot-redis-sample</module>
+        <module>beihu-boot-web-sample</module>
+        <module>beihu-boot-mybatis-sample</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>beihu-boot-dependencies</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

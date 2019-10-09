@@ -5,7 +5,7 @@
 
     <groupId>ltd.beihu.core</groupId>
     <artifactId>beihu-boot-build</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.3</version>
     <packaging>pom</packaging>
 
     <name>beihu-boot</name>
@@ -23,8 +23,22 @@
     </properties>
 
     <modules>
-
+        <module>beihu-boot-project</module>
+        <module>beihu-boot-samples</module>
     </modules>
+
+    <distributionManagement>
+        <repository>
+            <id>release</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.2.113:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.2.113:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <plugins>
