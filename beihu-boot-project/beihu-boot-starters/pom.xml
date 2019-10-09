@@ -25,6 +25,7 @@
         <module>datasource-beihu-boot-starter</module>
         <module>security-oauth-jwt-beihu-boot-starter</module>
         <module>minio-beihu-boot-starter</module>
+        <module>quartz-beihu-boot-starter</module>
     </modules>
 
 </project>

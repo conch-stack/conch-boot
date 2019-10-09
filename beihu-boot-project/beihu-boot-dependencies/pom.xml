@@ -108,7 +108,11 @@
                 <artifactId>minio-beihu-boot</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>quartz-beihu-boot</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.alipay.sofa</groupId>
@@ -155,6 +159,11 @@
             <dependency>
                 <groupId>ltd.beihu.core</groupId>
                 <artifactId>minio-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>quartz-beihu-boot-starter</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
 

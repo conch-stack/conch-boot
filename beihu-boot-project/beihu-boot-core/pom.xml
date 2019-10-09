@@ -22,5 +22,6 @@
         <module>security-beihu-boot</module>
         <module>security-enhance-beihu-boot</module>
         <module>minio-beihu-boot</module>
+        <module>quartz-beihu-boot</module>
     </modules>
 </project>
