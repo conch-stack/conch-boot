@@ -86,6 +86,11 @@
 			<artifactId>quartz-beihu-boot</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>ltd.beihu.core</groupId>
+			<artifactId>anti-scrapy-beihu-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 		<!--spring web-->
 		<dependency>

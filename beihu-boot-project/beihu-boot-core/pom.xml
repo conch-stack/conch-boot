@@ -23,5 +23,6 @@
         <module>security-enhance-beihu-boot</module>
         <module>minio-beihu-boot</module>
         <module>quartz-beihu-boot</module>
+        <module>anti-scrapy-beihu-boot</module>
     </modules>
 </project>
