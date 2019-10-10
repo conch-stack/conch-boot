@@ -5,7 +5,6 @@ import java.util.concurrent.Future;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.parallel]
  * @Description: [抽象并发执行器]
  * @Author: [toming]
  * @CreateDate: [10/13/16 2:59 PM]

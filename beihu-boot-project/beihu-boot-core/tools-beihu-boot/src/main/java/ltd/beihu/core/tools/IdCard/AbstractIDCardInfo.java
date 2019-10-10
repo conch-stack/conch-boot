@@ -9,7 +9,6 @@ import java.util.Map;
 
 /**
  * @Project: [CommonUtil]
- * @Package: [com.pengshu.common.IdCard]
  * @Description: [description]
  * @Author: [toming]
  * @CreateDate: [7/23/16 1:38 PM]

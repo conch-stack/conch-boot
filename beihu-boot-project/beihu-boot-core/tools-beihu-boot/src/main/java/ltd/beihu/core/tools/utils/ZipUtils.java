@@ -10,7 +10,6 @@ import java.util.zip.*;
 
 /**
  * @Project: [PermissionServiceSys]
- * @Package: [com.pengshu.common.utils]
  * @Description: [压缩工具类]
  * @Author: [toming]
  * @CreateDate: [5/23/16 11:20 AM]

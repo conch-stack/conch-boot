@@ -5,7 +5,6 @@ import java.util.Map;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.template]
  * @Description: [最简单的使用使用map存储，非线程安全]
  * @Author: [toming]
  * @CreateDate: [9/20/16 7:06 PM]

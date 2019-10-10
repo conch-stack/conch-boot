@@ -9,7 +9,6 @@ import java.util.concurrent.Future;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.parallel]
  * @Description: [命名的并发执行器服务]
  * @Author: [toming]
  * @CreateDate: [10/13/16 3:27 PM]

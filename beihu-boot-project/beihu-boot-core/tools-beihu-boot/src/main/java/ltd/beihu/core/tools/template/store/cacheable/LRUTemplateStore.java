@@ -7,7 +7,6 @@ import java.util.Map;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.template.store]
  * @Description: [本地LRU模板库]
  * @Author: [toming]
  * @CreateDate: [9/20/16 7:14 PM]

@@ -4,7 +4,6 @@ import java.util.Objects;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.single]
  * @Description: [循环操作，可以被中断]
  * @Author: [toming]
  * @CreateDate: [9/8/16 3:01 PM]

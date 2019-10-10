@@ -11,7 +11,6 @@ import java.util.Map;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.template.format]
  * @Description: [模板格式化的一个实现]
  * @Author: [toming]
  * @CreateDate: [9/22/16 4:46 PM]

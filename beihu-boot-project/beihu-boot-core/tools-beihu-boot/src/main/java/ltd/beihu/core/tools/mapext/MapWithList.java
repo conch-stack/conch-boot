@@ -8,7 +8,6 @@ import java.util.List;
 
 /**
  * @Project: [ceres]
- * @Package: [com.pengshu.common.mapext]
  * @Description: [description]
  * @Author: [toming]
  * @CreateDate: [12/5/16 2:10 PM]

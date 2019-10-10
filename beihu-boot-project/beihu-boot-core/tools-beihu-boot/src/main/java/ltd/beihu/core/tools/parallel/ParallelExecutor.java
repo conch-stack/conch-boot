@@ -4,7 +4,6 @@ import java.io.Closeable;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.parallel]
  * @Description: [并发执行器]
  * @Author: [toming]
  * @CreateDate: [10/12/16 10:27 AM]

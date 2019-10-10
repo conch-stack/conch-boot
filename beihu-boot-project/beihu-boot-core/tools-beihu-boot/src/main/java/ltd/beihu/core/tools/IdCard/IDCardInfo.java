@@ -4,7 +4,6 @@ import java.util.Date;
 
 /**
  * @Project: [CommonUtil]
- * @Package: [com.pengshu.common.IdCard]
  * @Description: [description]
  * @Author: [toming]
  * @CreateDate: [7/23/16 1:36 PM]

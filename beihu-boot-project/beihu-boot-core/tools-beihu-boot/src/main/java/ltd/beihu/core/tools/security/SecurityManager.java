@@ -81,7 +81,7 @@ public class SecurityManager {
 
     private Encryptor findEncrypt(String algorithm) {
 
-        Reflections reflections = new Reflections("com.pengshu");
+        Reflections reflections = new Reflections("ltd.beihu");
 
         Set<Class<?>> encryptSupportClses = reflections.getTypesAnnotatedWith(EncryptSupport.class);
         for (Class<?> encryptSupportCls : encryptSupportClses) {
@@ -125,7 +125,7 @@ public class SecurityManager {
 
     private Decryptor findDecrypt(String algorithm) {
 
-        Reflections reflections = new Reflections("com.pengshu");
+        Reflections reflections = new Reflections("ltd.beihu");
 
         Set<Class<?>> decryptSupportClses = reflections.getTypesAnnotatedWith(DecryptSupport.class);
         for (Class<?> decryptSupportCls : decryptSupportClses) {

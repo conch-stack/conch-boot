@@ -36,6 +36,7 @@
 - SOFAStack 深度探索
 - 支付宝包装（支付、小程序等）
 - 微信开发者 开箱即用
+- 验证码 参考：https://github.com/whvcse/EasyCaptcha
 
 
 

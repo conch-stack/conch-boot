@@ -2,7 +2,6 @@ package ltd.beihu.core.tools.threadExtension.single;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.single]
  * @Description: [抽象单线程循环执行类]
  * @Author: [toming]
  * @CreateDate: [9/13/16 2:10 PM]

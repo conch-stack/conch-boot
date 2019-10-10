@@ -7,7 +7,6 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.parallel]
  * @Description: [description]
  * @Author: [toming]
  * @CreateDate: [10/31/16 9:40 AM]

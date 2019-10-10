@@ -10,7 +10,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.single]
  * @Description: [抽象单线程执行类]
  * @Author: [toming]
  * @CreateDate: [9/8/16 11:40 AM]

@@ -9,7 +9,6 @@ import java.util.Map;
 
 /**
  * @Project: [CommonUtil]
- * @Package: [com.pengshu.commonutils.json]
  * @Description: [Bean工具]
  * @Author: [toming]
  * @CreateDate: [6/17/16 5:47 PM]

@@ -10,7 +10,6 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.parallel]
  * @Description: [并发任务管理器]
  * @Author: [toming]
  * @CreateDate: [10/13/16 3:09 PM]

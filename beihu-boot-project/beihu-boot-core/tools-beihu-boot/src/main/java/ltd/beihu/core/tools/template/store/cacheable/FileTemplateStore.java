@@ -15,7 +15,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.eximpl]
  * @Description: [从文件中读取模板]
  * @Author: [toming]
  * @CreateDate: [9/19/16 11:22 AM]

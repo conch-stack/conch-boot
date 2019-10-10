@@ -6,7 +6,6 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.single]
  * @Description: [单线程无限循环类]
  * @Author: [toming]
  * @CreateDate: [9/13/16 1:57 PM]

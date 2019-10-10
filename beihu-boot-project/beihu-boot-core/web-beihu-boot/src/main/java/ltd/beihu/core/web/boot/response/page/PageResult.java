@@ -6,7 +6,6 @@ import java.util.List;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.crawler.utils]
  * @Description: [翻页结果]
  * @Author: [toming]
  * @CreateDate: [10/20/16 1:52 PM]

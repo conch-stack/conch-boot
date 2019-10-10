@@ -2,7 +2,6 @@ package ltd.beihu.core.tools.parallel;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.parallel]
  * @Description: [并发执行器服务]
  * @Author: [toming]
  * @CreateDate: [10/14/16 2:56 PM]

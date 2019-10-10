@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 
 /**
  * @Project: [ops]
- * @Package: [com.pengshu.common.utils]
  * @Description: [集合扩展性操作]
  * @Author: [toming]
  * @CreateDate: [10/26/16 2:15 PM]

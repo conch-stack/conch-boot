@@ -6,7 +6,6 @@ import java.util.Date;
 
 /**
  * @Project: [CommonUtil]
- * @Package: [com.pengshu.common]
  * @Description: [description]
  * @Author: [toming]
  * @CreateDate: [7/23/16 11:38 AM]
