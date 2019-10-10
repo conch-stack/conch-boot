@@ -27,6 +27,7 @@
         <module>minio-beihu-boot-starter</module>
         <module>quartz-beihu-boot-starter</module>
         <module>anti-scrapy-beihu-boot-starter</module>
+        <module>zookeeper-beihu-boot-starter</module>
     </modules>
 
 </project>
