@@ -22,6 +22,7 @@
 | minio-beihu-boot-starter              | Minio           | 开箱即用，对象存储（文件、视频、音频等），支持永久链接       |
 | quartz-beihu-boot-starter             | Quartz          | 开箱即用，分布式定时任务支持，简化使用                       |
 | anti-scrapy-beihu-boot-starter        | Anti-Scrapy     | 开箱即用，反爬虫(屏蔽：恶意请求、渠道刷量等)                 |
+| zookeeper-beihu-boot-starter          | Zookeeper       | 简单包装curator工具到SpringBoot，操作Zookeeper             |
 
 ##### 
 
