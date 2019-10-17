@@ -20,6 +20,7 @@
         <module>beihu-boot-redis-sample</module>
         <module>beihu-boot-web-sample</module>
         <module>beihu-boot-mybatis-sample</module>
+        <module>beihu-boot-dingtalk-sample</module>
     </modules>
     <dependencies>
         <dependency>
