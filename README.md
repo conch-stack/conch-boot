@@ -23,16 +23,14 @@
 | quartz-beihu-boot-starter             | Quartz          | 开箱即用，分布式定时任务支持，简化使用                       |
 | anti-scrapy-beihu-boot-starter        | Anti-Scrapy     | 开箱即用，反爬虫(屏蔽：恶意请求、渠道刷量等)                 |
 | zookeeper-beihu-boot-starter          | Zookeeper       | 简单包装curator工具到SpringBoot，操作Zookeeper             |
+| dingtalk-beihu-boot-starter           | Dingtalk        | 开箱即用，集成钉钉机器人通知API                             |
 
 ##### 
 
 ##### TODO：
 
 - 分离邮件服务
-
-- 钉钉报警 开箱使用
-
--  Kafka 简单日志 开箱使用
+- Kafka 简单日志 开箱使用
 - SOFAStack 深度探索
 - 支付宝包装（支付、小程序等）
 - 微信开发者 开箱即用
