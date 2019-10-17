@@ -91,6 +91,11 @@
 			<artifactId>anti-scrapy-beihu-boot</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>ltd.beihu.core</groupId>
+			<artifactId>dingtalk-beihu-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 		<!-- Zookeeper -->
 		<!-- curator 封装Zk操作-->

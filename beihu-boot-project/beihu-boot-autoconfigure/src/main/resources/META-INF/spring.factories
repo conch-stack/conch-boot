@@ -10,4 +10,5 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   ltd.beihu.core.boot.autoconfigure.minio.MinioAutoConfiguration, \
   ltd.beihu.core.boot.autoconfigure.quartz.ApiBootQuartzAutoConfiguration, \
   ltd.beihu.core.boot.autoconfigure.antiscrapy.AntiSecurityAutoConfiguration, \
-  ltd.beihu.core.boot.autoconfigure.zookeeper.BeihuZookeeperAutoConfiguration
+  ltd.beihu.core.boot.autoconfigure.zookeeper.BeihuZookeeperAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.dingtalk.DingtalkChatbotAutoConfiguration
