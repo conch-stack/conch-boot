@@ -119,6 +119,11 @@
                 <artifactId>anti-scrapy-beihu-boot</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>dingtalk-beihu-boot</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.alipay.sofa</groupId>
@@ -177,6 +182,17 @@
                 <artifactId>anti-scrapy-beihu-boot-starter</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>zookeeper-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>dingtalk-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
+
 
             <!--3rd lib dependency-->
             <dependency>
