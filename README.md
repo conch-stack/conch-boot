@@ -25,7 +25,11 @@
 | zookeeper-beihu-boot-starter          | Zookeeper       | 简单包装curator工具到SpringBoot，操作Zookeeper             |
 | dingtalk-beihu-boot-starter           | Dingtalk        | 开箱即用，集成钉钉机器人通知API                             |
 
-##### 
+##### 使用方式：
+> 1. clone源码
+> 2. 本地maven需配置[阿里云maven仓库服务](https://help.aliyun.com/document_detail/102512.html?spm=a2c40.aliyun_maven_repo.0.0.361830547v3oXJ)
+> 3. IDEA需安装Lombok插件
+> 4. 使用IDEA自带的maven图形界面，选择 `beihu-boot` -> `Lifecycle` -> `install`  引入依赖
 
 ##### TODO：
 
