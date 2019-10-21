@@ -30,6 +30,8 @@
 > 2. 本地maven需配置[阿里云maven仓库服务](https://help.aliyun.com/document_detail/102512.html?spm=a2c40.aliyun_maven_repo.0.0.361830547v3oXJ)
 > 3. IDEA需安装Lombok插件
 > 4. 使用IDEA自带的maven图形界面，选择 `beihu-boot` -> `Lifecycle` -> `install`  引入依赖
+> 5. 所有开箱组件，对应都有相应的sample使用示例，如果未发现使用示例的Starter，一般整合在`beihu-boot-web-sample`中，否则就真的没有示例
+> 6. 使用sample需要配置`application.properties`文件中的配置文件
 
 ##### TODO：
 
