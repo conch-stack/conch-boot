@@ -40,7 +40,18 @@
 - SOFAStack 深度探索
 - 支付宝包装（支付、小程序等）
 - 微信开发者 开箱即用
-- 验证码 参考：https://github.com/whvcse/EasyCaptcha
+- 验证码
+  - https://github.com/whvcse/EasyCaptcha
+- JVM监控支持
+- JVM研究
+  - https://github.com/alibaba/metrics
+  - https://github.com/alibaba/jvm-sandbox
+  - https://github.com/alibaba/jvm-sandbox-repeater
+- 事件驱动
+  - https://gitee.com/zkpursuit/kaka-notice-lib
+- 任务调度
+  - https://github.com/apache/incubator-dolphinscheduler
+- 插件开发模式
 
 
 
