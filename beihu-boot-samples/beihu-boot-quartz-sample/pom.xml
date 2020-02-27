@@ -24,22 +24,22 @@
             <artifactId>quartz-beihu-boot-starter</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>ltd.beihu.core</groupId>
-            <artifactId>mybatis-enhance-beihu-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>ltd.beihu.core</groupId>
-            <artifactId>mybatis-pageable-beihu-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ltd.beihu.core</groupId>-->
+<!--            <artifactId>mybatis-enhance-beihu-boot-starter</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>ltd.beihu.core</groupId>-->
+<!--            <artifactId>mybatis-pageable-beihu-boot-starter</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba</groupId>-->
+<!--            <artifactId>druid-spring-boot-starter</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>mysql</groupId>-->
+<!--            <artifactId>mysql-connector-java</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

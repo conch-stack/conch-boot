@@ -23,5 +23,6 @@ public class DemoJob extends QuartzJobBean {
         logger.info("定时任务Job Key ： {}", context.getJobDetail().getKey());
         logger.info("定时任务执行时所携带的参数：{}", JSON.toJSONString(context.getJobDetail().getJobDataMap()));
         //...处理逻辑
+//        context.getJobDetail().getJobDataMap().getString("")
     }
 }
