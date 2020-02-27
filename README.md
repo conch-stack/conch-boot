@@ -51,7 +51,13 @@
   - https://gitee.com/zkpursuit/kaka-notice-lib
 - 任务调度
   - https://github.com/apache/incubator-dolphinscheduler
+  - https://github.com/xuxueli/xxl-job/
 - 插件开发模式
+  - DataX or https://github.com/alibaba/jvm-sandbox-repeater
+- SQL解析&优化
+  - https://tech.meituan.com/2018/05/20/sql-parser-used-in-mtdp.html
+- 借鉴自研MyBatis-plus
+- 添加ES多数据源支持
 
 
 
