@@ -49,6 +49,8 @@
         <mybatis.enhance.dsl.version>1.1.1.RELEASE</mybatis.enhance.dsl.version>
         <minio.version>3.0.10</minio.version>
         <curator.version>2.12.0</curator.version>
+        <spring-data-elasticsearch.version>3.0.14.RELEASE</spring-data-elasticsearch.version>
+        <jest.version>5.3.4</jest.version>
 
         <!--maven plugin-->
         <maven.staging.plugin>1.6.7</maven.staging.plugin>
@@ -192,6 +194,11 @@
                 <artifactId>dingtalk-beihu-boot-starter</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>mutil-elasticsearch-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
 
 
             <!--3rd lib dependency-->
@@ -331,6 +338,27 @@
                         <artifactId>log4j</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <!--elasticsearch-->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-elasticsearch</artifactId>
+                <version>${spring-data-elasticsearch.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jcl-over-slf4j</artifactId>
+                        <groupId>org.slf4j</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>log4j-core</artifactId>
+                        <groupId>org.apache.logging.log4j</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>io.searchbox</groupId>
+                <artifactId>jest</artifactId>
+                <version>${jest.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
