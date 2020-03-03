@@ -11,4 +11,6 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   ltd.beihu.core.boot.autoconfigure.quartz.ApiBootQuartzAutoConfiguration, \
   ltd.beihu.core.boot.autoconfigure.antiscrapy.AntiSecurityAutoConfiguration, \
   ltd.beihu.core.boot.autoconfigure.zookeeper.BeihuZookeeperAutoConfiguration, \
-  ltd.beihu.core.boot.autoconfigure.dingtalk.DingtalkChatbotAutoConfiguration
+  ltd.beihu.core.boot.autoconfigure.dingtalk.DingtalkChatbotAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.mutiles.BeihuMutilElasticsearchJestAutoConfiguration, \
+  ltd.beihu.core.boot.autoconfigure.mutiles.BeihuMutilElasticsearchAutoConfiguration
