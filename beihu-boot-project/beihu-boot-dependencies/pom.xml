@@ -194,6 +194,11 @@
                 <artifactId>dingtalk-beihu-boot-starter</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>mutil-elasticsearch-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
 
 
             <!--3rd lib dependency-->
