@@ -58,7 +58,6 @@
 - SQL解析&优化
   - https://tech.meituan.com/2018/05/20/sql-parser-used-in-mtdp.html
 - 借鉴自研MyBatis-plus
-- 添加ES多数据源支持
 
 
 
