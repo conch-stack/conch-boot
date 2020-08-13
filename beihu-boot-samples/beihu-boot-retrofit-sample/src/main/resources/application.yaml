@@ -1,0 +1,10 @@
+# Spring
+spring:
+  application:
+    name: Beihu-Retrofit-Test
+  profiles:
+    active: dev
+
+# Server
+server:
+  port: 8080

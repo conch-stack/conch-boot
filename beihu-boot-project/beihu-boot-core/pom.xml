@@ -25,5 +25,6 @@
         <module>quartz-beihu-boot</module>
         <module>anti-scrapy-beihu-boot</module>
         <module>dingtalk-beihu-boot</module>
+        <module>retrofit-beihu-boot</module>
     </modules>
 </project>

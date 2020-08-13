@@ -1,8 +1,5 @@
 package ltd.beihu.core.beihubootwebsample;
 
-import ltd.beihu.core.beihubootwebsample.http.TestHttpClient;
-import ltd.beihu.core.beihubootwebsample.http.TestHttpDto;
-import ltd.beihu.core.beihubootwebsample.http.TestHttpRs;
 import ltd.beihu.core.tools.code.BasicServiceCode;
 import ltd.beihu.core.web.boot.exception.ServiceException;
 import ltd.beihu.core.web.boot.response.BasicResponse;
@@ -10,10 +7,6 @@ import ltd.beihu.core.web.boot.response.JsonResponse;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import retrofit2.Call;
-
-import javax.annotation.Resource;
-import java.io.IOException;
 
 /**
  * @Author: zjz
@@ -23,9 +16,6 @@ import java.io.IOException;
  */
 @RestController
 public class TestCtrl {
-
-    @Resource
-    private TestHttpClient testHttpClient;
 
     /**
      * 测试正常web服务
@@ -49,21 +39,6 @@ public class TestCtrl {
     @RequestMapping("/test3")
     public String test3() {
         throw new ServiceException(BasicServiceCode.FAILED);
-    }
-
-    /**
-     * 测试http请求
-     */
-    @RequestMapping("/test4")
-    public JsonResponse test() {
-        try {
-            Call<TestHttpRs> call = testHttpClient.test(TestHttpDto.mock());
-            TestHttpRs body = call.execute().body();
-            return BasicResponse.success(body);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return BasicResponse.error();
     }
 
 }

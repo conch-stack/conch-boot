@@ -1,0 +1,13 @@
+beihu:
+  retrofit:
+    client:
+      converter-name: jackson
+      max-connections: 200
+      time-to-live: 900
+      time-to-live-unit: seconds
+      connection-timeout: 3000
+      read-timeout: 2000
+      write-timeout: 2000
+      follow-redirects: true
+      disable-ssl-validation: false
+      enable-log: true

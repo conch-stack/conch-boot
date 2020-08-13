@@ -1,0 +1,21 @@
+{
+  "hints": [
+    {
+      "name": "beihu.retrofit.client.converter-name",
+      "values": [
+        {
+          "value": "jackson"
+        },
+        {
+          "value": "gson"
+        }
+      ],
+      "providers": [
+        {
+          "name": "any"
+        }
+      ]
+    }
+  ]
+}
+

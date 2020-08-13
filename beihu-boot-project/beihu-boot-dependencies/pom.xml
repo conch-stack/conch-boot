@@ -36,7 +36,7 @@
         <guava.version>28.0-jre</guava.version>
         <reflections.version>0.9.11</reflections.version>
         <redisson.version>3.11.1</redisson.version>
-        <retrofit.version>2.5.0</retrofit.version>
+        <retrofit.version>2.9.0</retrofit.version>
         <quartz.version>2.3.2</quartz.version>
         <druid.version>1.1.17</druid.version>
         <druid.starter.version>1.1.17</druid.starter.version>
@@ -126,6 +126,11 @@
                 <artifactId>dingtalk-beihu-boot</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>retrofit-beihu-boot</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.alipay.sofa</groupId>
@@ -199,7 +204,11 @@
                 <artifactId>mutil-elasticsearch-beihu-boot-starter</artifactId>
                 <version>${beihu.boot.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>ltd.beihu.core</groupId>
+                <artifactId>retrofit-beihu-boot-starter</artifactId>
+                <version>${beihu.boot.version}</version>
+            </dependency>
 
             <!--3rd lib dependency-->
             <dependency>
@@ -222,19 +231,49 @@
                 <artifactId>redisson</artifactId>
                 <version>${redisson.version}</version>
             </dependency>
+
+            <!-- retrofit2 -->
             <dependency>
                 <groupId>com.squareup.retrofit2</groupId>
                 <artifactId>retrofit</artifactId>
                 <version>${retrofit.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.squareup.retrofit2</groupId>
-                <artifactId>adapter-java8</artifactId>
-                <version>${retrofit.version}</version>
-            </dependency>
+
+            <!-- retrofit2 Converters -->
+            <!-- application/json -->
             <dependency>
                 <groupId>com.squareup.retrofit2</groupId>
                 <artifactId>converter-jackson</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+            <!-- application/json -->
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-gson</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+            <!-- application/json -->
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-moshi</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+            <!-- text/plain -->
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-scalars</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+            <!-- application/xml -->
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-jaxb</artifactId>
+                <version>${retrofit.version}</version>
+            </dependency>
+            <!-- application/x-protobuf -->
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>converter-protobuf</artifactId>
                 <version>${retrofit.version}</version>
             </dependency>
 

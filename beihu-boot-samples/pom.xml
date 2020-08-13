@@ -16,11 +16,13 @@
     </properties>
 
     <modules>
+        <module>beihu-boot-anti-scrapy-sample</module>
         <module>beihu-boot-mongo-sample</module>
         <module>beihu-boot-redis-sample</module>
         <module>beihu-boot-web-sample</module>
         <module>beihu-boot-mybatis-sample</module>
         <module>beihu-boot-dingtalk-sample</module>
+        <module>beihu-boot-quartz-sample</module>
     </modules>
     <dependencies>
         <dependency>
