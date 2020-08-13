@@ -5,7 +5,7 @@
     <parent>
         <groupId>ltd.beihu.core</groupId>
         <artifactId>beihu-boot-samples</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </parent>
     <artifactId>beihu-boot-mybatis-sample</artifactId>
 
@@ -66,7 +66,7 @@
             <plugin>
                 <groupId>ltd.beihu.core</groupId>
                 <artifactId>beihu-boot-mybatis-enhance-maven-codegen</artifactId>
-                <version>1.0.3</version>
+                <version>1.0.4</version>
                 <dependencies>
                     <!--数据驱动依赖 MySQL的驱动默认只能使用5.x版本-->
                     <dependency>
