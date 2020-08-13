@@ -35,6 +35,12 @@ public class RetrofitClientAutoConfiguration {
 
     private OkHttpClient okHttpClient;
 
+    private RetrofitClientProperties retrofitClientProperties;
+
+    public RetrofitClientAutoConfiguration(RetrofitClientProperties retrofitClientProperties) {
+        this.retrofitClientProperties = retrofitClientProperties;
+    }
+
     @Bean
     @ConditionalOnMissingBean
     public OkHttpClientConnectionPoolFactory connPoolFactory() {
@@ -55,9 +61,7 @@ public class RetrofitClientAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean(ConnectionPool.class)
-    public ConnectionPool httpClientConnectionPool(
-            RetrofitClientProperties retrofitClientProperties,
-            OkHttpClientConnectionPoolFactory connectionPoolFactory) {
+    public ConnectionPool httpClientConnectionPool(OkHttpClientConnectionPoolFactory connectionPoolFactory) {
         Integer maxTotalConnections = retrofitClientProperties.getMaxConnections();
         Long timeToLive = retrofitClientProperties.getTimeToLive();
         TimeUnit ttlUnit = retrofitClientProperties.getTimeToLiveUnit();
@@ -66,8 +70,7 @@ public class RetrofitClientAutoConfiguration {
 
     @Bean
     public OkHttpClient client(OkHttpClientFactory httpClientFactory,
-                                       ConnectionPool connectionPool,
-                                       RetrofitClientProperties retrofitClientProperties) {
+                                       ConnectionPool connectionPool) {
         Boolean followRedirects = retrofitClientProperties.isFollowRedirects();
         Integer connectTimeout = retrofitClientProperties.getConnectionTimeout();
         Integer readTimeout = retrofitClientProperties.getReadTimeout();
@@ -97,7 +100,6 @@ public class RetrofitClientAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean(RetrofitClientBuildDelegate.class)
     public RetrofitClientBuildDelegate retrofitClientBuildDelegate(OkHttpClient client,
-                                                                   RetrofitClientProperties retrofitClientProperties,
                                                                    ObjectProvider<ObjectMapper> mapper,
                                                                    ObjectProvider<Gson> gson) {
         return new RetrofitClientBuildDelegate(client, mapper.getIfAvailable(), gson.getIfAvailable(), retrofitClientProperties.getConverterName());

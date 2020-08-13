@@ -1,6 +1,5 @@
 package ltd.beihu.core.retrofit.boot.interceptor;
 
-
 import okhttp3.Headers;
 import okhttp3.Interceptor;
 import okhttp3.MediaType;

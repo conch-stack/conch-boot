@@ -210,9 +210,11 @@ public class RetrofitClientScannerRegistrar implements ImportBeanDefinitionRegis
                 // modify remote call to local
                 if (localCall) {
                     String currentServerPort = environment.getProperty("server.port");
-                    String newPattern = "http://127.0.0.1:" + currentServerPort;
-                    String oldPattern = targetUrl.getProtocol() + "://" + ((-1 != targetUrl.getPort()) ? targetUrl.getHost() + ":" + targetUrl.getPort() : targetUrl.getHost());
-                    url = StringUtils.replace(url, oldPattern, newPattern);
+                    if (!"-1".equals(currentServerPort)) {
+                        String newPattern = "http://127.0.0.1:" + currentServerPort;
+                        String oldPattern = targetUrl.getProtocol() + "://" + ((-1 != targetUrl.getPort()) ? targetUrl.getHost() + ":" + targetUrl.getPort() : targetUrl.getHost());
+                        url = StringUtils.replace(url, oldPattern, newPattern);
+                    }
                 }
             } catch (MalformedURLException e) {
                 throw new IllegalArgumentException(url + " is malformed", e);

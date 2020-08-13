@@ -1,7 +1,7 @@
 {
   "hints": [
     {
-      "name": "beihu.retrofit.client.converter-name",
+      "name": "retrofit.client.converter-name",
       "values": [
         {
           "value": "jackson"

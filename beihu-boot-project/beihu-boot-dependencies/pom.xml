@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.alipay.sofa</groupId>
         <artifactId>sofaboot-dependencies</artifactId>
-        <version>3.1.4</version>
+        <version>3.4.3</version>
     </parent>
 
     <groupId>ltd.beihu.core</groupId>

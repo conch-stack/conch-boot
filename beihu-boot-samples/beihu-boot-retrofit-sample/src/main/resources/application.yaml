@@ -4,6 +4,24 @@ spring:
     name: Beihu-Retrofit-Test
   profiles:
     active: dev
+  # email config
+  mail:
+    host:
+    port:
+    username:
+    password:
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+beihu:
+  mail:
+    prefix: test
+    send-from:
+    send-to: 
 
 # Server
 server:

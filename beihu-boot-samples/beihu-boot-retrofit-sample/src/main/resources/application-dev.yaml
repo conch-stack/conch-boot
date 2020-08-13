@@ -1,7 +1,7 @@
 beihu:
   retrofit:
     client:
-      converter-name: jackson
+      converter-name: gson
       max-connections: 200
       time-to-live: 900
       time-to-live-unit: seconds
