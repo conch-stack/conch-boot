@@ -73,7 +73,7 @@
 
 `[SOFAStack](https://www.sofastack.tech/)`
 
-###### 大神：
+###### 肩膀：
 
 `[Api-Boot](https://github.com/minbox-projects/api-boot)`
 
