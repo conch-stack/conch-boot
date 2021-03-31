@@ -33,7 +33,7 @@
 
         <!--3rd lib dependency-->
         <commons.beanutils.version>1.9.4</commons.beanutils.version>
-        <guava.version>28.0-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <reflections.version>0.9.11</reflections.version>
         <redisson.version>3.11.1</redisson.version>
         <retrofit.version>2.9.0</retrofit.version>
