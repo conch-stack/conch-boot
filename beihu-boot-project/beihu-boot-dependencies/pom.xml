@@ -42,7 +42,7 @@
         <druid.starter.version>1.1.17</druid.starter.version>
         <code.builder.core.version>1.0.5.RELEASE</code.builder.core.version>
         <mysema.codegen.version>0.6.8</mysema.codegen.version>
-        <security.oauth2.version>2.3.5.RELEASE</security.oauth2.version>
+        <security.oauth2.version>2.3.6.RELEASE</security.oauth2.version>
         <spring.security.jwt.version>1.0.10.RELEASE</spring.security.jwt.version>
         <mybatis.pageable.core.version>1.0.7.RELEASE</mybatis.pageable.core.version>
         <mybatis.enhance.core.version>1.1.1.RELEASE</mybatis.enhance.core.version>
