@@ -88,7 +88,7 @@
                     <dbUrl>jdbc:mysql://192.168.2.44:3307</dbUrl>
                     <dbUserName>root</dbUserName>
                     <dbPassword>123456</dbPassword>
-                    <packageName>ltd.beihu.core.beihubootmybatissample.model</packageName>
+                    <packageName>com.nabob.conch.boot.mybatissample.model</packageName>
                     <tableNamePattern>%</tableNamePattern>
                 </configuration>
             </plugin>

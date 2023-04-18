@@ -1,4 +1,4 @@
-beihu:
+conch:
   retrofit:
     client:
       converter-name: gson

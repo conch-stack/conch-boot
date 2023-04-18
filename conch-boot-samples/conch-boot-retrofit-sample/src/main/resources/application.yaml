@@ -1,7 +1,7 @@
 # Spring
 spring:
   application:
-    name: Beihu-Retrofit-Test
+    name: Conch-Retrofit-Test
   profiles:
     active: dev
   # email config
@@ -17,7 +17,7 @@ spring:
           auth: true
           ssl:
             enable: true
-beihu:
+conch:
   mail:
     prefix: test
     send-from:
