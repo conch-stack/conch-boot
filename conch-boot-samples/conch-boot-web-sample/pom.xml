@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>ltd.beihu.core</groupId>
-        <artifactId>beihu-boot-samples</artifactId>
-        <version>1.0.4</version>
+        <groupId>com.nabob.conch</groupId>
+        <artifactId>conch-boot-samples</artifactId>
+        <version>${revision}</version>
     </parent>
-    <artifactId>beihu-boot-web-sample</artifactId>
+    <artifactId>conch-boot-web-sample</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
@@ -16,12 +16,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>ltd.beihu.core</groupId>
-            <artifactId>web-beihu-boot-starter</artifactId>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>web-conch-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>ltd.beihu.core</groupId>
-            <artifactId>minio-beihu-boot-starter</artifactId>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>minio-conch-boot-starter</artifactId>
         </dependency>
 
         <dependency>
