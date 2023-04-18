@@ -1,4 +1,4 @@
-package ltd.beihu.core.datasource.boot.config;
+package com.nabob.conch.datasource.config;
 
 import lombok.Data;
 

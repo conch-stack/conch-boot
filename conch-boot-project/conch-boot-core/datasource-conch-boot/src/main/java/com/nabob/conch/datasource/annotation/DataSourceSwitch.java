@@ -1,4 +1,4 @@
-package ltd.beihu.core.datasource.boot.annotation;
+package com.nabob.conch.datasource.annotation;
 
 import java.lang.annotation.*;
 

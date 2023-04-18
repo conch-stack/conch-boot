@@ -15,7 +15,7 @@
  *
  */
 
-package ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder.impl;
+package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.impl;
 
 import com.gitee.hengboy.builder.core.database.model.Column;
 import com.gitee.hengboy.builder.core.database.model.Table;
@@ -26,8 +26,8 @@ import com.mysema.codegen.JavaWriter;
 import com.mysema.codegen.model.Parameter;
 import com.mysema.codegen.model.SimpleType;
 import com.mysema.codegen.model.Types;
-import ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.EnhanceCodegenConstant;
-import ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
+import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.EnhanceCodegenConstant;
+import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 
 import java.io.StringWriter;
 

@@ -1,7 +1,7 @@
-package ltd.beihu.core.securitybeihuboot.point;
+package com.nabob.conch.security.point;
 
-import ltd.beihu.core.tools.code.BasicServiceCode;
-import ltd.beihu.core.web.boot.exception.ServiceException;
+import com.nabob.conch.tools.code.BasicServiceCode;
+import com.nabob.conch.web.exception.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.AuthenticationException;

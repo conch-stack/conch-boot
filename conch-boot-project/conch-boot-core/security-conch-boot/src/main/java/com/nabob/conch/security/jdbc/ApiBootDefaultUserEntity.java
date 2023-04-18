@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package ltd.beihu.core.securitybeihuboot.jdbc;
+package com.nabob.conch.security.jdbc;
 
 import lombok.Data;
 

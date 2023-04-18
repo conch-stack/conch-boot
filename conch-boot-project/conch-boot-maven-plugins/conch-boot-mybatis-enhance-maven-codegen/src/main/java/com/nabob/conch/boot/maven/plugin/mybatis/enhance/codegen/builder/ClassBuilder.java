@@ -15,7 +15,7 @@
  *
  */
 
-package ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder;
+package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder;
 
 /**
  * Entity Class Builder

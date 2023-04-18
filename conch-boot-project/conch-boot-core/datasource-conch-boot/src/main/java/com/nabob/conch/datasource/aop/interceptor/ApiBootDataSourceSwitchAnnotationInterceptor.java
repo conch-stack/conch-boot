@@ -1,7 +1,7 @@
-package ltd.beihu.core.datasource.boot.aop.interceptor;
+package com.nabob.conch.datasource.aop.interceptor;
 
-import ltd.beihu.core.datasource.boot.annotation.DataSourceSwitch;
-import ltd.beihu.core.datasource.boot.routing.DataSourceContextHolder;
+import com.nabob.conch.datasource.annotation.DataSourceSwitch;
+import com.nabob.conch.datasource.routing.DataSourceContextHolder;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.aop.support.AopUtils;

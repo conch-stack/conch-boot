@@ -1,4 +1,4 @@
-package ltd.beihu.core.beihubootretrofitsample.client;
+package com.nabob.conch.boot.retrofitsample.client;
 
 import com.nabob.conch.retrofit.annotation.RetrofitClient;
 import retrofit2.Call;

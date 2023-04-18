@@ -1,4 +1,4 @@
-package ltd.beihu.core.beihubootwebsample.minio;
+package com.nabob.conch.boot.websample.minio;
 
 import io.minio.ObjectStat;
 import io.minio.errors.*;

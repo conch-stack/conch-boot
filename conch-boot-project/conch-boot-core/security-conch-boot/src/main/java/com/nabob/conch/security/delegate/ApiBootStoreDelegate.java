@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package ltd.beihu.core.securitybeihuboot.delegate;
+package com.nabob.conch.security.delegate;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

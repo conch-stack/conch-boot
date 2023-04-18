@@ -1,7 +1,6 @@
-package ltd.beihu.core.datasource.boot.config;
+package com.nabob.conch.datasource.config;
 
 import lombok.Data;
-import ltd.beihu.core.datasource.boot.DataSourceTypeNames;
 
 import javax.sql.DataSource;
 
@@ -27,7 +26,7 @@ public class DataSourceConfig {
     /**
      * data source type
      *
-     * @see DataSourceTypeNames
+     * @see com.nabob.conch.datasource.DataSourceTypeNames
      */
     private Class<? extends DataSource> dataSourceType;
     /**

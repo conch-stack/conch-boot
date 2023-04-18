@@ -1,4 +1,4 @@
-package ltd.beihu.core.web.boot.response.page;
+package com.nabob.conch.web.response.page;
 
 public interface Pageable {
     int getIndex();

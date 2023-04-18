@@ -1,7 +1,7 @@
-package ltd.beihu.core.datasource.boot.aop.advistor;
+package com.nabob.conch.datasource.aop.advistor;
 
-import ltd.beihu.core.datasource.boot.annotation.DataSourceSwitch;
-import ltd.beihu.core.datasource.boot.aop.interceptor.ApiBootDataSourceSwitchAnnotationInterceptor;
+import com.nabob.conch.datasource.annotation.DataSourceSwitch;
+import com.nabob.conch.datasource.aop.interceptor.ApiBootDataSourceSwitchAnnotationInterceptor;
 import org.aopalliance.aop.Advice;
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.support.AbstractPointcutAdvisor;

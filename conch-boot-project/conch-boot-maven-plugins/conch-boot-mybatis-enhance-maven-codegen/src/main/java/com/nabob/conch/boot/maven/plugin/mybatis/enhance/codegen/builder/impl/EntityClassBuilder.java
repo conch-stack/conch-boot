@@ -15,7 +15,7 @@
  *
  */
 
-package ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder.impl;
+package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.impl;
 
 import com.gitee.hengboy.builder.common.enums.JavaTypeEnum;
 import com.gitee.hengboy.mybatis.enhance.common.annotation.Column;
@@ -25,9 +25,9 @@ import com.gitee.hengboy.mybatis.enhance.common.enums.KeyGeneratorTypeEnum;
 import com.mysema.codegen.CodeWriter;
 import com.mysema.codegen.JavaWriter;
 import com.mysema.codegen.model.SimpleType;
+import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.EnhanceCodegenConstant;
+import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 import lombok.Data;
-import ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.EnhanceCodegenConstant;
-import ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 import org.springframework.util.StringUtils;
 
 import java.io.IOException;

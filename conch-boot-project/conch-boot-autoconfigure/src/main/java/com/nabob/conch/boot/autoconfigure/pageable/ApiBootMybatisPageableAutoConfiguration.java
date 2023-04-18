@@ -15,7 +15,7 @@
  *
  */
 
-package ltd.beihu.core.boot.autoconfigure.pageable;
+package com.nabob.conch.boot.autoconfigure.pageable;
 
 import com.gitee.hengboy.mybatis.pageable.config.PageableConfigurer;
 import com.gitee.hengboy.mybatis.pageable.interceptor.MyBatisExecutePageableInterceptor;

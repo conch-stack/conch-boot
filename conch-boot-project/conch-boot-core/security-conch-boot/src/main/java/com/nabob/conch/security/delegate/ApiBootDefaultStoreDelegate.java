@@ -14,10 +14,10 @@
  *    limitations under the License.
  */
 
-package ltd.beihu.core.securitybeihuboot.delegate;
+package com.nabob.conch.security.delegate;
 
 import com.google.common.base.CaseFormat;
-import ltd.beihu.core.securitybeihuboot.userdetails.ApiBootDefaultUserDetails;
+import com.nabob.conch.security.userdetails.ApiBootDefaultUserDetails;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.userdetails.UserDetails;

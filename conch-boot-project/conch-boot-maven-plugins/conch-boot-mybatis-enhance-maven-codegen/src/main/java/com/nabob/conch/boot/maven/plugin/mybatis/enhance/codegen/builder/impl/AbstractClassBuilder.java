@@ -15,12 +15,12 @@
  *
  */
 
-package ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder.impl;
+package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.impl;
 
 import com.gitee.hengboy.builder.common.util.StringUtil;
+import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.ClassBuilder;
+import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 import lombok.Getter;
-import ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder.ClassBuilder;
-import ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 
 /**
  * Abstract Entity Builder

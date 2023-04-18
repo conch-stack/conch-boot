@@ -15,9 +15,9 @@
  *
  */
 
-package ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder;
+package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder;
 
-import ltd.beihu.core.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
+import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 
 import java.lang.reflect.Constructor;
 

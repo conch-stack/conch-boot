@@ -79,7 +79,7 @@ public class LightPresent<T> implements Cube<T> {
 
     @Override
     public <V> Cube<V> map(Function<? super T, V> function) {
-        return of(function.apply(reference));
+        return Cube.of(function.apply(reference));
     }
 
     @Override
