@@ -32,9 +32,3 @@ for filename in `find . -name "gradle.properties" -mindepth 3`;do
     echo "Deal with $filename"
     sed "s/sofaVersion=.*/sofaVersion=$1/g" $filename
 done
-
-echo "!!!!! end and you need to change: conch-boot-dependencies version"
-echo "!!!!! sofaboot-dependencies -> <version>3.4.3</version>"
-echo "!!!!! conch-boot-dependencies -> <version>$1</version>"
-echo "!!!!! properties -> <conch.boot.version>$1</conch.boot.version>"
-echo "!!!!! conch-boot-mybatis-sample -> conch-boot-mybatis-enhance-maven-codegen -> <version>$1</version>"

@@ -19,7 +19,7 @@
     <description>Conch Boot Build</description>
 
     <properties>
-        <revision>1.0.5</revision>
+        <revision>1.0.5-SNAPSHOT</revision>
         <conch.boot.version>${revision}</conch.boot.version>
 
         <main.user.dir>${basedir}</main.user.dir>
