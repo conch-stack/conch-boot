@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.nabob.conch</groupId>
+        <artifactId>conch-boot-parent</artifactId>
+        <version>${revision}</version>
+        <relativePath>../conch-boot-parent</relativePath>
+    </parent>
+
+    <artifactId>conch-boot-core</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>mongo-conch-boot</module>
+        <module>tools-conch-boot</module>
+        <module>redis-conch-boot</module>
+        <module>web-conch-boot</module>
+        <module>datasource-conch-boot</module>
+        <module>oauth-conch-boot</module>
+        <module>security-conch-boot</module>
+        <module>security-enhance-conch-boot</module>
+        <module>minio-conch-boot</module>
+        <module>quartz-conch-boot</module>
+        <module>anti-scrapy-conch-boot</module>
+        <module>dingtalk-conch-boot</module>
+        <module>retrofit-conch-boot</module>
+    </modules>
+</project>

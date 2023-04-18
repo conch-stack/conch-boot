@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.nabob.conch</groupId>
+        <artifactId>conch-boot-build</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>conch-boot-samples</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <main.user.dir>${basedir}/..</main.user.dir>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
+    <modules>
+        <module>conch-boot-anti-scrapy-sample</module>
+        <module>conch-boot-mongo-sample</module>
+        <module>conch-boot-redis-sample</module>
+        <module>conch-boot-web-sample</module>
+        <module>conch-boot-mybatis-sample</module>
+        <module>conch-boot-dingtalk-sample</module>
+        <module>conch-boot-quartz-sample</module>
+        <module>conch-boot-retrofit-sample</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.nabob.conch</groupId>
+                <artifactId>conch-boot-dependencies</artifactId>
+                <version>${conch.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

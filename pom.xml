@@ -3,42 +3,56 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ltd.beihu.core</groupId>
-    <artifactId>beihu-boot-build</artifactId>
-    <version>1.0.4</version>
-    <packaging>pom</packaging>
+    <parent>
+        <groupId>com.alipay.sofa</groupId>
+        <artifactId>sofaboot-dependencies</artifactId>
+        <version>3.17.0</version>
+        <!-- Add this to resolve to repository -->
+        <relativePath />
+    </parent>
 
-    <name>beihu-boot</name>
-    <description>beihu-boot</description>
+    <groupId>com.nabob.conch</groupId>
+    <artifactId>conch-boot-build</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+    <name>Conch Boot Build</name>
+    <description>Conch Boot Build</description>
 
     <properties>
-        <java.version>1.8</java.version>
-        <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
+        <revision>1.0.5</revision>
+        <conch.boot.version>${revision}</conch.boot.version>
+
         <main.user.dir>${basedir}</main.user.dir>
+        <java.version>1.8</java.version>
+        <project.encoding>UTF-8</project.encoding>
+
+        <!--maven plugin-->
+        <maven.staging.plugin>1.6.7</maven.staging.plugin>
+        <maven.gpg.pluign>1.6</maven.gpg.pluign>
+        <flatten-maven-plugin.version>1.2.7</flatten-maven-plugin.version>
+        <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
         <license.maven.plugin>3.0</license.maven.plugin>
         <maven.java.formatter.plugin>0.4</maven.java.formatter.plugin>
-        <project.encoding>UTF-8</project.encoding>
-        <java.version>1.8</java.version>
         <maven.compiler.plugin>3.1</maven.compiler.plugin>
     </properties>
 
     <modules>
-        <module>beihu-boot-project</module>
-        <module>beihu-boot-samples</module>
+        <module>conch-boot-project</module>
+        <module>conch-boot-samples</module>
     </modules>
 
-    <distributionManagement>
-        <repository>
-            <id>release</id>
-            <name>Nexus Release Repository</name>
-            <url>http://192.168.2.113:8081/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Nexus Snapshot Repository</name>
-            <url>http://192.168.2.113:8081/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>release</id>-->
+<!--            <name>Nexus Release Repository</name>-->
+<!--            <url>http://192.168.2.113:8081/nexus/content/repositories/releases</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>snapshots</id>-->
+<!--            <name>Nexus Snapshot Repository</name>-->
+<!--            <url>http://192.168.2.113:8081/nexus/content/repositories/snapshots</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
 
     <build>
         <plugins>
@@ -60,6 +74,40 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>flatten-maven-plugin</artifactId>
+                    <version>${flatten-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 </project>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.nabob.conch</groupId>
+        <artifactId>conch-boot-maven-plugins</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>conch-boot-mybatis-enhance-maven-codegen</artifactId>
+    <packaging>maven-plugin</packaging>
+
+    <properties>
+        <main.user.dir>${basedir}/../../..</main.user.dir>
+    </properties>
+
+    <dependencies>
+        <!--Codegen-->
+        <dependency>
+            <groupId>com.mysema.codegen</groupId>
+            <artifactId>codegen</artifactId>
+        </dependency>
+        <!--Code Builder-->
+        <dependency>
+            <groupId>com.gitee.hengboy</groupId>
+            <artifactId>code-builder-core</artifactId>
+        </dependency>
+        <!--Mybatis Enhance Core-->
+        <dependency>
+            <groupId>com.gitee.hengboy</groupId>
+            <artifactId>mybatis-enhance-core</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--Mybatis Enhance Dsl-->
+        <dependency>
+            <groupId>com.gitee.hengboy</groupId>
+            <artifactId>mybatis-enhance-dsl</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--Lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--fastJson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+    </dependencies>
+</project>
