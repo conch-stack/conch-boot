@@ -45,6 +45,7 @@
         <curator.version>2.12.0</curator.version>
         <spring-data-elasticsearch.version>3.0.14.RELEASE</spring-data-elasticsearch.version>
         <jest.version>5.3.4</jest.version>
+        <mybatis-flex.version>1.2.0</mybatis-flex.version>
 
         <!--maven plugin-->
         <maven.staging.plugin>1.6.7</maven.staging.plugin>
@@ -386,6 +387,11 @@
                 <groupId>io.searchbox</groupId>
                 <artifactId>jest</artifactId>
                 <version>${jest.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mybatis-flex</groupId>
+                <artifactId>mybatis-flex-spring-boot-starter</artifactId>
+                <version>${mybatis-flex.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
