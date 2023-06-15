@@ -62,4 +62,4 @@ log/
 /nbdist/
 /.nb-gradle/
 \.DS_Store
-beihu-boot-samples/beihu-boot-quartz-sample/src/main/resources/my\.info
+conch-boot-samples/conch-boot-quartz-sample/src/main/resources/my\.info

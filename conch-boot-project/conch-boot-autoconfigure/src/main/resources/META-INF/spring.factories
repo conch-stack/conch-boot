@@ -1,0 +1,17 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.nabob.conch.boot.autoconfigure.mongo.ConchMongoDataAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.redis.ConchRedisAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.redis.ConchRedissonConfiguration, \
+  com.nabob.conch.boot.autoconfigure.mail.MailAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.pageable.ApiBootMybatisPageableAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.datasource.ApiBootDataSourceSwitchAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.minio.MinioAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.quartz.ApiBootQuartzAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.antiscrapy.AntiSecurityAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.zookeeper.ConchZookeeperAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.dingtalk.DingtalkChatbotAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.mutiles.ConchMutilElasticsearchJestAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.mutiles.ConchMutilElasticsearchAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.retrofit.RetrofitClientAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.sqlinit.ConchSqlInitAutoConfiguration

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.nabob.conch</groupId>
+		<artifactId>conch-boot-parent</artifactId>
+		<version>${revision}</version>
+		<relativePath>../conch-boot-parent</relativePath>
+	</parent>
+
+	<artifactId>conch-boot-autoconfigure</artifactId>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<main.user.dir>${basedir}/../..</main.user.dir>
+	</properties>
+
+	<dependencies>
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure-processor</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-metadata</artifactId>
+		</dependency>
+
+		<!-- Optional -->
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>tools-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>mongo-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>redis-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>web-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>datasource-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>security-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>oauth-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>minio-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>quartz-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>anti-scrapy-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>dingtalk-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.nabob.conch</groupId>
+			<artifactId>retrofit-conch-boot</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- Zookeeper -->
+		<!-- curator 封装Zk操作-->
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
+			<optional>true</optional>
+		</dependency>
+		<!-- 提供常用分布式通用模块 分布式锁、队列、计数器。。。 -->
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-recipes</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
+			<optional>true</optional>
+		</dependency>
+
+		<!--elasticsearch-->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-elasticsearch</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>jcl-over-slf4j</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>log4j-core</artifactId>
+					<groupId>org.apache.logging.log4j</groupId>
+				</exclusion>
+			</exclusions>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>io.searchbox</groupId>
+			<artifactId>jest</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--spring web-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--Spring Boot Redis-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--spring boot security-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--security oauth2-->
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!--jwt-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--ApiBoot DataSource Switch-->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--ApiBoot Mybatis Pageable-->
+		<dependency>
+			<groupId>com.gitee.hengboy</groupId>
+			<artifactId>mybatis-pageable-core</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!--ApiBoot Mybatis Enhance-->
+		<dependency>
+			<groupId>com.gitee.hengboy</groupId>
+			<artifactId>mybatis-enhance-core</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.gitee.hengboy</groupId>
+			<artifactId>mybatis-enhance-dsl</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+	</dependencies>
+
+</project>

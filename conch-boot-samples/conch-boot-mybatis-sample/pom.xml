@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.nabob.conch</groupId>
+        <artifactId>conch-boot-samples</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <artifactId>conch-boot-mybatis-sample</artifactId>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>web-conch-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>mybatis-enhance-conch-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>mybatis-pageable-conch-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!--
+        | 参数名             | 默认值 | 描述                                                       |
+        | `execute`          |  false | `Codegen`是否执行                                          |
+        | `dbName`           |        | 数据库名称                                                 |
+        | `dbUrl`            |        | 数据库连接路径（排除数据库名称）                           |
+        | `dbUserName`       |        | 连接数据库用户名                                           |
+        | `dbPassword`       |        | 连接数据库密码                                             |
+        | `packageName`      |        | 生成后实体类的package                                      |
+        | `tableNamePattern` |      % | 表名过滤表达式，向like语法一样使用，默认匹配数据库内全部表 |
+
+        Codegen`所生成的所有实体都位于项目根目录下的`target/generated-sources/java`下，可以自行复制到业务目录、或者直接使用。
+    -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.1.0.RELEASE</version>
+            </plugin>
+            <plugin>
+                <groupId>com.nabob.conch</groupId>
+                <artifactId>conch-boot-mybatis-enhance-maven-codegen</artifactId>
+                <version>${project.version}</version>
+                <dependencies>
+                    <!--数据驱动依赖 MySQL的驱动默认只能使用5.x版本-->
+                    <dependency>
+                        <groupId>com.mysql</groupId>
+                        <artifactId>mysql-connector-j</artifactId>
+                        <version>8.0.32</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generator</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <execute>false</execute>
+                    <dbName>test</dbName>
+                    <dbUrl>jdbc:mysql://localhost:3306</dbUrl>
+                    <dbUserName>root</dbUserName>
+                    <dbPassword>123456</dbPassword>
+                    <packageName>com.nabob.conch.boot.mybatissample.model</packageName>
+                    <tableNamePattern>%</tableNamePattern>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

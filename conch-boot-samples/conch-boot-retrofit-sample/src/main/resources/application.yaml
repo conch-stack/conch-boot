@@ -1,0 +1,28 @@
+# Spring
+spring:
+  application:
+    name: Conch-Retrofit-Test
+  profiles:
+    active: dev
+  # email config
+  mail:
+    host:
+    port:
+    username:
+    password:
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+conch:
+  mail:
+    prefix: test
+    send-from:
+    send-to: 
+
+# Server
+server:
+  port: 8080

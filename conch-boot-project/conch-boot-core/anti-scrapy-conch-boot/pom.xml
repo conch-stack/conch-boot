@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.nabob.conch</groupId>
+        <artifactId>conch-boot-core</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <artifactId>anti-scrapy-conch-boot</artifactId>
+
+    <name>anti-scrapy-conch-boot</name>
+    <description>简单过滤爬虫请求Security模块</description>
+
+    <properties>
+        <main.user.dir>${basedir}/../../..</main.user.dir>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>redis-conch-boot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>tools-conch-boot</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.nabob.conch</groupId>
+        <artifactId>conch-boot-starters</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <artifactId>web-conch-boot-starter</artifactId>
+
+    <properties>
+        <main.user.dir>${basedir}/../../..</main.user.dir>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>web-conch-boot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>conch-boot-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
