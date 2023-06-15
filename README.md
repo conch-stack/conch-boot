@@ -6,7 +6,7 @@
 
 ##### 版本：
 
-   ` v1.0.4`
+   ` v1.0.5`
 
 ##### 包含：
 
@@ -34,33 +34,6 @@
 > 4. 使用IDEA自带的maven图形界面，选择 `conch-boot` -> `Lifecycle` -> `install`  引入依赖
 > 5. 所有开箱组件，对应都有相应的sample使用示例，如果未发现使用示例的Starter，一般整合在`conch-boot-web-sample`中，否则就真的没有示例
 > 6. 使用sample需要配置`application.properties`文件中的配置文件
-
-##### TODO：
-
-- 分离邮件服务
-- Kafka 简单日志 开箱使用
-- SOFAStack 深度探索
-- 支付宝包装（支付、小程序等）
-- 微信开发者 开箱即用
-- 验证码
-  - https://github.com/whvcse/EasyCaptcha
-- JVM监控支持
-- JVM研究
-  - https://github.com/alibaba/metrics
-  - https://github.com/alibaba/jvm-sandbox
-  - https://github.com/alibaba/jvm-sandbox-repeater
-- 事件驱动
-  - https://gitee.com/zkpursuit/kaka-notice-lib
-- 任务调度
-  - https://github.com/apache/incubator-dolphinscheduler
-  - https://github.com/xuxueli/xxl-job/
-- 插件开发模式
-  - DataX or https://github.com/alibaba/jvm-sandbox-repeater
-- SQL解析&优化
-  - https://tech.meituan.com/2018/05/20/sql-parser-used-in-mtdp.html
-- 借鉴自研MyBatis-plus
-
-
 
 ##### 重要：
 
