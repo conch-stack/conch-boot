@@ -27,6 +27,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -72,6 +73,26 @@ public class SqlFileInitializer {
     public boolean checkSqlExecutable(String sqlStatement){
         sqlStatement = buildPureSqlStatement(sqlStatement);
         return sqlExecutor.validateQuery(sqlStatement);
+    }
+
+    /**
+     * 检查SQL文件是否已经执行过 - by TableName
+     * @return
+     */
+    public boolean checkSqlTableExisted(String tableName) {
+        // 获取SqlSessionFactory实例
+        if (sqlSessionFactory == null){
+            log.warn("无法获取SqlSessionFactory实例，Check SQL将不被执行。");
+            return false;
+        }
+        try {
+            SqlSession session = sqlSessionFactory.openSession();
+            Connection conn = session.getConnection();
+            ResultSet rs = conn.getMetaData().getTables(null, null, tableName, null);
+            return rs.next();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     /***

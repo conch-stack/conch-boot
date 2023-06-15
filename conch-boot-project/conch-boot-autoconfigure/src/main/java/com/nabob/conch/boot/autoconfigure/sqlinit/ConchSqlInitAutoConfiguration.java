@@ -29,7 +29,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @ConditionalOnClass({SqlSessionFactory.class, SqlSessionFactoryBean.class, MapperFactoryBean.class})
-@ConditionalOnBean({DataSource.class, JdbcTemplate.class, Environment.class, SqlSessionFactory.class})
+@ConditionalOnBean({DataSource.class})
 @AutoConfigureAfter({DataSourceAutoConfiguration.class, ApiBootDataSourceSwitchAutoConfiguration.class, ApiBootMyBatisEnhanceAutoConfiguration.class})
 @ConditionalOnProperty(value = "conch.init-sql.enable", havingValue = "true")
 public class ConchSqlInitAutoConfiguration {

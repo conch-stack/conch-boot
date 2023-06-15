@@ -85,7 +85,7 @@
                 <configuration>
                     <execute>false</execute>
                     <dbName>test</dbName>
-                    <dbUrl>jdbc:mysql://192.168.2.44:3307</dbUrl>
+                    <dbUrl>jdbc:mysql://localhost:3306</dbUrl>
                     <dbUserName>root</dbUserName>
                     <dbPassword>123456</dbPassword>
                     <packageName>com.nabob.conch.boot.mybatissample.model</packageName>
