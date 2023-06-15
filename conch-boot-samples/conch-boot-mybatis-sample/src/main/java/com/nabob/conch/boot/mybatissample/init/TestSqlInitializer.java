@@ -48,7 +48,7 @@ public class TestSqlInitializer implements ApplicationRunner {
 
         // 检查数据库字典是否已存在
         if (sqlFileInitializer.checkSqlTableExisted("org_account") == false) {
-            sqlFileInitializer.initBootstrapSql(this.getClass());
+            sqlFileInitializer.initBootstrapSql(this.getClass(), "test");
             log.info("conch 初始化SQL完成.");
         } else {
             log.info("conch 跳过初始化SQL（已初始化过）.");

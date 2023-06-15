@@ -14,7 +14,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -37,11 +36,8 @@ public class ConchSqlInitAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public SqlFileInitializer sqlFileInitializer(ObjectProvider<JdbcTemplate> jdbcTemplateObjectProvider,
-                                                 ObjectProvider<Environment> environmentObjectProvider,
                                                  ObjectProvider<SqlSessionFactory> sqlSessionFactoryObjectProvider) {
-        SqlExecutor sqlExecutor = new SqlExecutor(jdbcTemplateObjectProvider.getIfAvailable());
-        return new SqlFileInitializer(environmentObjectProvider.getIfAvailable(),
-                sqlExecutor, sqlSessionFactoryObjectProvider.getIfAvailable());
+        return new SqlFileInitializer(new SqlExecutor(jdbcTemplateObjectProvider.getIfAvailable()), sqlSessionFactoryObjectProvider.getIfAvailable());
     }
 
 }

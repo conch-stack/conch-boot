@@ -17,11 +17,11 @@ package com.nabob.conch.boot.autoconfigure.sqlinit;
 
 import com.nabob.conch.tools.utils.S;
 import com.nabob.conch.tools.utils.V;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.env.Environment;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -45,14 +45,12 @@ import java.util.stream.Collectors;
 public class SqlFileInitializer {
     private static final Logger log = LoggerFactory.getLogger(SqlFileInitializer.class);
 
-    private static String SQL_PATH = "META-INF/sql/init.sql";
+    private static String SQL_PATH = "META-INF/sql/init-%s.sql";
 
-    private Environment environment;
     private SqlExecutor sqlExecutor;
     private SqlSessionFactory sqlSessionFactory;
 
-    public SqlFileInitializer(Environment environment, SqlExecutor sqlExecutor, SqlSessionFactory sqlSessionFactory) {
-        this.environment = environment;
+    public SqlFileInitializer(SqlExecutor sqlExecutor, SqlSessionFactory sqlSessionFactory) {
         this.sqlExecutor = sqlExecutor;
         this.sqlSessionFactory = sqlSessionFactory;
     }
@@ -61,18 +59,12 @@ public class SqlFileInitializer {
      * 初始化安装SQL
      * @return
      */
-    public void initBootstrapSql(Class inst){
-        extractAndExecuteSqls(inst, SQL_PATH);
-    }
-
-    /**
-     * 检查SQL文件是否已经执行过
-     * @param sqlStatement
-     * @return
-     */
-    public boolean checkSqlExecutable(String sqlStatement){
-        sqlStatement = buildPureSqlStatement(sqlStatement);
-        return sqlExecutor.validateQuery(sqlStatement);
+    public void initBootstrapSql(Class inst, String module){
+        if (StringUtils.isBlank(module)) {
+            log.warn("无法获取初始化SQL");
+            return;
+        }
+        extractAndExecuteSqls(inst, String.format(SQL_PATH, module));
     }
 
     /**

@@ -54,27 +54,6 @@ public class SqlExecutor {
     }
 
     /**
-     * 检查SQL是否可以正常执行
-     */
-    private static DoNothingCallbackHandler doNothingCallbackHandler = new DoNothingCallbackHandler();
-
-    public boolean validateQuery(String sqlStatement) {
-        JdbcTemplate jdbcTemplate = getJdbcTemplate();
-        if (jdbcTemplate != null) {
-            try {
-                log.debug("==> {}", sqlStatement);
-                jdbcTemplate.query(sqlStatement, doNothingCallbackHandler);
-                return true;
-            } catch (Exception e) {
-                log.trace("执行验证SQL:{} 失败:{}", sqlStatement, e.getMessage());
-                return false;
-            }
-        } else {
-            throw new RuntimeException("无法获取JdbcTemplate实例");
-        }
-    }
-
-    /**
      * 执行无参查询SQL
      */
     public List<Map<String, Object>> executeQuery(String sqlStatement) throws Exception {
