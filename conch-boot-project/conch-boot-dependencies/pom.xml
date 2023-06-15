@@ -27,6 +27,7 @@
 
         <!--3rd lib dependency-->
         <commons.beanutils.version>1.9.4</commons.beanutils.version>
+        <commons-io.version>2.5</commons-io.version>
         <guava.version>29.0-jre</guava.version>
         <reflections.version>0.9.11</reflections.version>
         <redisson.version>3.11.1</redisson.version>
@@ -209,6 +210,11 @@
                 <groupId>commons-beanutils</groupId>
                 <artifactId>commons-beanutils</artifactId>
                 <version>${commons.beanutils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.reflections</groupId>

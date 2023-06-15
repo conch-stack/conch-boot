@@ -13,4 +13,5 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.nabob.conch.boot.autoconfigure.dingtalk.DingtalkChatbotAutoConfiguration, \
   com.nabob.conch.boot.autoconfigure.mutiles.ConchMutilElasticsearchJestAutoConfiguration, \
   com.nabob.conch.boot.autoconfigure.mutiles.ConchMutilElasticsearchAutoConfiguration, \
-  com.nabob.conch.boot.autoconfigure.retrofit.RetrofitClientAutoConfiguration
+  com.nabob.conch.boot.autoconfigure.retrofit.RetrofitClientAutoConfiguration, \
+  com.nabob.conch.boot.autoconfigure.sqlinit.ConchSqlInitAutoConfiguration
