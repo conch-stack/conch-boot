@@ -17,7 +17,7 @@
 
 package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper;
 
-import com.gitee.hengboy.builder.core.database.model.Table;
+import com.nabob.conch.builder.core.database.model.Table;
 import lombok.Builder;
 import lombok.Data;
 

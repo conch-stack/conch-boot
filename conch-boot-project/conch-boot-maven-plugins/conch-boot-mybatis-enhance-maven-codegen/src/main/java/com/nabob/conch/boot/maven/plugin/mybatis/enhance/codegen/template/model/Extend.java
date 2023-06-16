@@ -17,6 +17,8 @@
 
 package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.template.model;
 
+import java.util.List;
+
 /**
  * extend entity
  *
@@ -29,4 +31,5 @@ package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.template.model
  * GitHub：https://github.com/hengboy
  */
 public class Extend extends NameImport {
+    // EnhanceMapper<%s, %s> 框架特殊处理
 }

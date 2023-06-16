@@ -18,7 +18,7 @@
 package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.expression;
 
 import com.alibaba.fastjson.JSON;
-import com.gitee.hengboy.builder.core.database.model.Column;
+import com.nabob.conch.builder.core.database.model.Column;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.EnhanceCodegenConstant;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.setting.CodegenSetting;

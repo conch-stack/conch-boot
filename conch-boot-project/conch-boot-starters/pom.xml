@@ -31,6 +31,7 @@
         <module>dingtalk-conch-boot-starter</module>
         <module>mutil-elasticsearch-conch-boot-starter</module>
         <module>retrofit-conch-boot-starter</module>
+        <module>iam-conch-boot-starter</module>
     </modules>
 
 </project>

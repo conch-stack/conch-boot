@@ -17,9 +17,9 @@
 
 package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.impl;
 
-import com.gitee.hengboy.builder.common.util.StringUtil;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.ClassBuilder;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
+import com.nabob.conch.builder.common.util.StringUtil;
 import lombok.Getter;
 
 /**

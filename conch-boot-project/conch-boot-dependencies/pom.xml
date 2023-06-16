@@ -200,6 +200,13 @@
                 <version>${conch.boot.version}</version>
             </dependency>
 
+            <!-- plugins -->
+            <dependency>
+                <groupId>com.nabob.conch</groupId>
+                <artifactId>conch-code-builder-core</artifactId>
+                <version>${conch.boot.version}</version>
+            </dependency>
+
             <!--3rd lib dependency-->
             <dependency>
                 <groupId>com.google.guava</groupId>

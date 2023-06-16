@@ -21,11 +21,22 @@
             <groupId>com.mysema.codegen</groupId>
             <artifactId>codegen</artifactId>
         </dependency>
-        <!--Code Builder-->
+<!--        &lt;!&ndash;Code Builder&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.gitee.hengboy</groupId>-->
+<!--            <artifactId>code-builder-core</artifactId>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>com.gitee.hengboy</groupId>
-            <artifactId>code-builder-core</artifactId>
+            <groupId>com.nabob.conch</groupId>
+            <artifactId>conch-code-builder-core</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
         <!--Mybatis Enhance Core-->
         <dependency>
             <groupId>com.gitee.hengboy</groupId>

@@ -17,20 +17,20 @@
 
 package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen;
 
-import com.gitee.hengboy.builder.common.CodeBuilderProperties;
-import com.gitee.hengboy.builder.common.enums.DbTypeEnum;
-import com.gitee.hengboy.builder.core.database.DataBase;
-import com.gitee.hengboy.builder.core.database.DataBaseFactory;
-import com.gitee.hengboy.builder.core.database.model.Table;
-import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.ClassBuilder;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.ClassBuilderFactory;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.impl.DynamicEntityClassBuilder;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.impl.EntityClassBuilder;
+import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.template.CodegenFile;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.template.CodegenTemplate;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.tools.CamelTools;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.writer.JavaClassWriter;
+import com.nabob.conch.builder.common.CodeBuilderProperties;
+import com.nabob.conch.builder.common.enums.DbTypeEnum;
+import com.nabob.conch.builder.core.database.DataBase;
+import com.nabob.conch.builder.core.database.DataBaseFactory;
+import com.nabob.conch.builder.core.database.model.Table;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -60,7 +60,7 @@ import java.util.List;
  * Gitee：https://gitee.com/hengboy
  * GitHub：https://github.com/hengboy
  */
-@Mojo(name = "generator", defaultPhase = LifecyclePhase.COMPILE)
+@Mojo(name = "generator", defaultPhase = LifecyclePhase.COMPILE, threadSafe = true)
 @Execute(phase = LifecyclePhase.COMPILE)
 public class ApiBootMybatisEnhanceCodegen extends AbstractMojo {
     /**

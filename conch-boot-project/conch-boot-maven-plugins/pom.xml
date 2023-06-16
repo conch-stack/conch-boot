@@ -18,6 +18,7 @@
 
     <modules>
         <module>conch-boot-mybatis-enhance-maven-codegen</module>
+        <module>conch-code-builder-core</module>
     </modules>
 
     <dependencies>

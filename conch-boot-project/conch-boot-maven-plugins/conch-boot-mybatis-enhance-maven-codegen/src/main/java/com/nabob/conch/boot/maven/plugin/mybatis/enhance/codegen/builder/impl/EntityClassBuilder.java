@@ -17,7 +17,7 @@
 
 package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.impl;
 
-import com.gitee.hengboy.builder.common.enums.JavaTypeEnum;
+import com.nabob.conch.builder.common.enums.JavaTypeEnum;
 import com.gitee.hengboy.mybatis.enhance.common.annotation.Column;
 import com.gitee.hengboy.mybatis.enhance.common.annotation.Id;
 import com.gitee.hengboy.mybatis.enhance.common.annotation.Table;
@@ -65,7 +65,7 @@ public class EntityClassBuilder extends AbstractClassBuilder {
             StringWriter stringWriter = new StringWriter();
             CodeWriter writer = new JavaWriter(stringWriter);
             // current table
-            com.gitee.hengboy.builder.core.database.model.Table table = getWrapper().getTable();
+            com.nabob.conch.builder.core.database.model.Table  table = getWrapper().getTable();
             // package
             writer.packageDecl(getWrapper().getPackageName());
 
@@ -86,7 +86,7 @@ public class EntityClassBuilder extends AbstractClassBuilder {
             // public class
             writer.beginClass(new SimpleType(getWrapper().getTableCamelName(), EnhanceCodegenConstant.EMPTY_STRING, getWrapper().getTableCamelName()), null, serializableInterface);
 
-            for (com.gitee.hengboy.builder.core.database.model.Column column : table.getColumns()) {
+            for (com.nabob.conch.builder.core.database.model.Column column : table.getColumns()) {
                 // comment
                 writer.javadoc(column.getRemark());
                 if (column.isPrimaryKey()) {
@@ -113,7 +113,7 @@ public class EntityClassBuilder extends AbstractClassBuilder {
      * @param table  current table
      * @param writer code writer
      */
-    void chooseImport(com.gitee.hengboy.builder.core.database.model.Table table, CodeWriter writer) throws IOException {
+    void chooseImport(com.nabob.conch.builder.core.database.model.Table table, CodeWriter writer) throws IOException {
         // basic imports
         writer.imports(Column.class, Id.class, Table.class, KeyGeneratorTypeEnum.class, Data.class, Serializable.class);
 
@@ -142,7 +142,7 @@ public class EntityClassBuilder extends AbstractClassBuilder {
      * @param column column
      * @return column annotation
      */
-    private String getColumnAnnotation(com.gitee.hengboy.builder.core.database.model.Column column) {
+    private String getColumnAnnotation(com.nabob.conch.builder.core.database.model.Column column) {
         // append content to @column(name=xxx after
         String columnAnnotation = String.format(COLUMN_ANNOTATION, column.getColumnName());
         // is java.sql.Timestamp && default value is current_timestamp
@@ -160,7 +160,7 @@ public class EntityClassBuilder extends AbstractClassBuilder {
      * @param column column
      * @return column default value
      */
-    private String getColumnDefaultValue(com.gitee.hengboy.builder.core.database.model.Column column) {
+    private String getColumnDefaultValue(com.nabob.conch.builder.core.database.model.Column column) {
         String pattern = " = %s";
         String defaultValue = EnhanceCodegenConstant.EMPTY_STRING;
         // don't have default value

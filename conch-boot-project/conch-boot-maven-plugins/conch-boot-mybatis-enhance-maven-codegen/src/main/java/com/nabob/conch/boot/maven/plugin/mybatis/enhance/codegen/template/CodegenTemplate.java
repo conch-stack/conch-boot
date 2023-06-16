@@ -21,6 +21,7 @@ import com.mysema.codegen.CodeWriter;
 import com.mysema.codegen.JavaWriter;
 import com.mysema.codegen.model.SimpleType;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.EnhanceCodegenConstant;
+import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.ClassBuilder;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.expression.VariableExpression;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.setting.CodegenSetting;
@@ -29,7 +30,9 @@ import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.template.model.
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.template.model.Field;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.template.model.Implement;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.template.model.Template;
+import com.nabob.conch.builder.core.database.model.Column;
 import lombok.Data;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 
 import java.io.StringWriter;
@@ -74,9 +77,12 @@ public class CodegenTemplate {
      */
     public List<CodegenFile> formatJavaFiles() {
         List<CodegenFile> files = new ArrayList();
+        Column primaryColumn = wrapper.getTable().getPrimaryKeys().get(0);
         codegenSetting.getTemplates().stream().forEach(template -> {
             CodegenFile codegenFile = new CodegenFile();
             codegenFile.setFileName(wrapper.getTableCamelName() + template.getJavaSuffix());
+            codegenFile.setMappingTableCamelName(wrapper.getTableCamelName());
+            codegenFile.setPrimaryColumn(primaryColumn);
             codegenFile.setPackageName(template.getPackageName());
             codegenFile.setJavaContent(formatJavaContent(template, codegenFile));
             files.add(codegenFile);
@@ -166,7 +172,9 @@ public class CodegenTemplate {
         // have extend class
         else {
             for (Extend extend : extendList) {
-                String superClassName = extend.getName();
+                String superClassName = ClassBuilder.ENHANCEMAPPER_EXPRESSION.equals(extend.getName()) ?
+                        String.format(extend.getName(), codegenFile.getMappingTableCamelName(), codegenFile.getPrimaryColumn().getJavaType())
+                        : extend.getName();
                 if (isInterface) {
                     // begin class
                     writer.beginInterface(new SimpleType(codegenFile.getFileName(), EnhanceCodegenConstant.EMPTY_STRING, codegenFile.getFileName()),
@@ -232,22 +240,27 @@ public class CodegenTemplate {
         List<String> imports = new ArrayList();
         // annotation import
         if (!ObjectUtils.isEmpty(template.getAnnotations())) {
-            template.getAnnotations().forEach(annotation -> imports.addAll(annotation.getImports()));
+            template.getAnnotations().stream().filter(target -> !CollectionUtils.isEmpty(target.getImports()))
+                    .forEach(annotation -> imports.addAll(annotation.getImports()));
         }
         // extend import
         if (!ObjectUtils.isEmpty(template.getExtendList())) {
-            template.getExtendList().forEach(extend -> imports.addAll(extend.getImports()));
+            template.getExtendList().stream().filter(target -> !CollectionUtils.isEmpty(target.getImports()))
+                    .forEach(extend -> imports.addAll(extend.getImports()));
         }
         // implement import
         if (!ObjectUtils.isEmpty(template.getImplementList())) {
-            template.getImplementList().forEach(implement -> imports.addAll(implement.getImports()));
+            template.getImplementList().stream().filter(target -> !CollectionUtils.isEmpty(target.getImports()))
+                    .forEach(implement -> imports.addAll(implement.getImports()));
         }
         // field import
         if (!ObjectUtils.isEmpty(template.getFields())) {
-            template.getFields().forEach(field -> {
+            template.getFields().stream().filter(target -> !CollectionUtils.isEmpty(target.getImports()))
+                    .forEach(field -> {
                 imports.addAll(field.getImports());
                 if (!ObjectUtils.isEmpty(field.getAnnotations())) {
-                    field.getAnnotations().forEach(annotation -> imports.addAll(annotation.getImports()));
+                    field.getAnnotations().stream().filter(target -> !CollectionUtils.isEmpty(target.getImports()))
+                            .forEach(annotation -> imports.addAll(annotation.getImports()));
                 }
             });
         }

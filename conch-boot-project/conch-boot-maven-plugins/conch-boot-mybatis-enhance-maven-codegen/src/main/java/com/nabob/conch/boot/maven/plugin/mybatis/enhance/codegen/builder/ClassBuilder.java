@@ -29,6 +29,12 @@ package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder;
  * GitHub：https://github.com/hengboy
  */
 public interface ClassBuilder {
+
+    /**
+     * EnhanceMapper Expression
+     */
+    public static final String ENHANCEMAPPER_EXPRESSION = "EnhanceMapper<%s, %s>";
+
     /**
      * get class content
      * use by generator class file

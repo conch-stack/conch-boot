@@ -17,6 +17,7 @@
 
 package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.template;
 
+import com.nabob.conch.builder.core.database.model.Column;
 import lombok.Data;
 
 /**
@@ -40,6 +41,14 @@ public class CodegenFile {
      * file name
      */
     private String fileName;
+    /**
+     * mapping TableCamelName
+     */
+    private String mappingTableCamelName;
+    /**
+     * primary Column
+     */
+    private Column primaryColumn;
     /**
      * file content
      */

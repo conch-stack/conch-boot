@@ -17,8 +17,6 @@
 
 package com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.impl;
 
-import com.gitee.hengboy.builder.core.database.model.Column;
-import com.gitee.hengboy.builder.core.database.model.Table;
 import com.gitee.hengboy.mybatis.enhance.dsl.expression.ColumnExpression;
 import com.gitee.hengboy.mybatis.enhance.dsl.expression.TableExpression;
 import com.mysema.codegen.CodeWriter;
@@ -28,6 +26,8 @@ import com.mysema.codegen.model.SimpleType;
 import com.mysema.codegen.model.Types;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.EnhanceCodegenConstant;
 import com.nabob.conch.boot.maven.plugin.mybatis.enhance.codegen.builder.wrapper.ClassBuilderWrapper;
+import com.nabob.conch.builder.core.database.model.Column;
+import com.nabob.conch.builder.core.database.model.Table;
 
 import java.io.StringWriter;
 
