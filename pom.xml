@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.alipay.sofa</groupId>
         <artifactId>sofaboot-dependencies</artifactId>
-        <version>3.17.0</version>
+        <version>4.2.0</version>
         <!-- Add this to resolve to repository -->
         <relativePath />
     </parent>
@@ -19,21 +19,20 @@
     <description>Conch Boot Build</description>
 
     <properties>
-        <revision>1.0.5</revision>
+        <revision>1.0.6</revision>
         <conch.boot.version>${revision}</conch.boot.version>
 
         <main.user.dir>${basedir}</main.user.dir>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <project.encoding>UTF-8</project.encoding>
+        <project.build.encoding>UTF-8</project.build.encoding>
 
         <!--maven plugin-->
-        <maven.staging.plugin>1.6.7</maven.staging.plugin>
+        <maven.staging.plugin>1.6.13</maven.staging.plugin>
         <maven.gpg.pluign>1.6</maven.gpg.pluign>
         <flatten-maven-plugin.version>1.2.7</flatten-maven-plugin.version>
-        <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
-        <license.maven.plugin>3.0</license.maven.plugin>
-        <maven.java.formatter.plugin>0.4</maven.java.formatter.plugin>
-        <maven.compiler.plugin>3.1</maven.compiler.plugin>
+        <maven.deploy.plugin.version>3.0.0</maven.deploy.plugin.version>
+        <maven.compiler.plugin>3.10.1</maven.compiler.plugin>
     </properties>
 
     <modules>

@@ -17,12 +17,7 @@
         <module>tools-conch-boot</module>
         <module>redis-conch-boot</module>
         <module>web-conch-boot</module>
-        <module>datasource-conch-boot</module>
-        <module>oauth-conch-boot</module>
-        <module>security-conch-boot</module>
-        <module>security-enhance-conch-boot</module>
         <module>minio-conch-boot</module>
-        <module>quartz-conch-boot</module>
         <module>anti-scrapy-conch-boot</module>
         <module>dingtalk-conch-boot</module>
         <module>retrofit-conch-boot</module>

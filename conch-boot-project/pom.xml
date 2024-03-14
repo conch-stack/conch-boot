@@ -17,7 +17,6 @@
 		<module>conch-boot-core</module>
 		<module>conch-boot-autoconfigure</module>
 		<module>conch-boot-starters</module>
-		<module>conch-boot-maven-plugins</module>
 	</modules>
 
 	<properties>

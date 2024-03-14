@@ -52,13 +52,6 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-commons</artifactId>
         </dependency>
-
-
-
-        <dependency>
-            <groupId>com.gitee.hengboy</groupId>
-            <artifactId>mybatis-pageable-core</artifactId>
-        </dependency>
     </dependencies>
 
 </project>

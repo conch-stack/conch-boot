@@ -15,12 +15,7 @@
 | mongo-conch-boot-starter               | MongoDB         | 开箱即用，支持读写分离                                       |
 | redis-conch-boot-starter               | Redis           | 开箱即用，序列化、分布式锁等                                 |
 | web-conch-boot-starter                 | Web             | 开箱即用，SofaRPC、Request、Response、Retrofit、异常、邮件等包装 |
-| mybatis-enhance-conch-boot-starter     | Mybatis-Enhance | 开箱即用，支持类jOOQ、JPA。支持代码生成                      |
-| mybatis-pageable-conch-boot-starter    | Mybatis         | 结合Mybatis-Enhance组件，分页查询支持                        |
-| datasource-conch-boot-starter          | MySQL           | 开箱即用，动态数据源支持                                     |
-| security-oauth-jwt-conch-boot-starter  | Security+Oauth2 | 开箱即用                                                     |
 | minio-conch-boot-starter               | Minio           | 开箱即用，对象存储（文件、视频、音频等），支持永久链接       |
-| quartz-conch-boot-starter              | Quartz          | 开箱即用，分布式定时任务支持，简化使用                       |
 | anti-scrapy-conch-boot-starter         | Anti-Scrapy     | 开箱即用，反爬虫(屏蔽：恶意请求、渠道刷量等)                 |
 | zookeeper-conch-boot-starter           | Zookeeper       | 简单包装curator工具到SpringBoot，操作Zookeeper               |
 | dingtalk-conch-boot-starter            | Dingtalk        | 开箱即用，集成钉钉机器人通知API                              |

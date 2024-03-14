@@ -13,19 +13,14 @@
     <packaging>pom</packaging>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <modules>
         <module>mongo-conch-boot-starter</module>
         <module>redis-conch-boot-starter</module>
         <module>web-conch-boot-starter</module>
-        <module>mybatis-enhance-conch-boot-starter</module>
-        <module>mybatis-pageable-conch-boot-starter</module>
-        <module>datasource-conch-boot-starter</module>
-        <module>security-oauth-jwt-conch-boot-starter</module>
         <module>minio-conch-boot-starter</module>
-        <module>quartz-conch-boot-starter</module>
         <module>anti-scrapy-conch-boot-starter</module>
         <module>zookeeper-conch-boot-starter</module>
         <module>dingtalk-conch-boot-starter</module>

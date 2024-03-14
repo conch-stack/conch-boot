@@ -21,9 +21,7 @@
         <module>conch-boot-mongo-sample</module>
         <module>conch-boot-redis-sample</module>
         <module>conch-boot-web-sample</module>
-        <module>conch-boot-mybatis-sample</module>
         <module>conch-boot-dingtalk-sample</module>
-        <module>conch-boot-quartz-sample</module>
         <module>conch-boot-retrofit-sample</module>
     </modules>
     <dependencies>

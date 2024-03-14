@@ -12,7 +12,7 @@
 	<artifactId>conch-boot-autoconfigure</artifactId>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 		<main.user.dir>${basedir}/../..</main.user.dir>
 	</properties>
 
@@ -63,27 +63,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.nabob.conch</groupId>
-			<artifactId>datasource-conch-boot</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.nabob.conch</groupId>
-			<artifactId>security-conch-boot</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.nabob.conch</groupId>
-			<artifactId>oauth-conch-boot</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.nabob.conch</groupId>
 			<artifactId>minio-conch-boot</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.nabob.conch</groupId>
-			<artifactId>quartz-conch-boot</artifactId>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -162,24 +142,6 @@
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!--spring boot security-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<!--security oauth2-->
-		<dependency>
-			<groupId>org.springframework.security.oauth</groupId>
-			<artifactId>spring-security-oauth2</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<!--jwt-->
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-jwt</artifactId>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -195,25 +157,6 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
-			<optional>true</optional>
-		</dependency>
-
-		<!--ApiBoot Mybatis Pageable-->
-		<dependency>
-			<groupId>com.gitee.hengboy</groupId>
-			<artifactId>mybatis-pageable-core</artifactId>
-			<optional>true</optional>
-		</dependency>
-
-		<!--ApiBoot Mybatis Enhance-->
-		<dependency>
-			<groupId>com.gitee.hengboy</groupId>
-			<artifactId>mybatis-enhance-core</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.gitee.hengboy</groupId>
-			<artifactId>mybatis-enhance-dsl</artifactId>
 			<optional>true</optional>
 		</dependency>
 

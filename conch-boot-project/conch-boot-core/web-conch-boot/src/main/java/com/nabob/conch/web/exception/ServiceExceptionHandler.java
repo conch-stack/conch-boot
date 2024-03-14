@@ -1,6 +1,5 @@
 package com.nabob.conch.web.exception;
 
-import com.gitee.hengboy.mybatis.pageable.common.exception.PageableException;
 import com.google.common.base.Throwables;
 import com.nabob.conch.tools.code.BasicServiceCode;
 import com.nabob.conch.web.response.JsonResponse;
@@ -54,15 +53,15 @@ public class ServiceExceptionHandler {
 		return BasicResponse.error(BasicServiceCode.BAD_REQUEST);
 	}
 
-	/**
-	 * 分页异常
-	 */
-	@ExceptionHandler(PageableException.class)
-	public JsonResponse handleServiceException(PageableException e){
-		String stackTraceAsString = Throwables.getStackTraceAsString(e);
-		LOGGER.error("【ServiceExceptionHandler - PageableException】\r\n [{}]", stackTraceAsString);
-		return BasicResponse.error(BasicServiceCode.PAGE_INDEX_ERROR);
-	}
+//	/**
+//	 * 分页异常
+//	 */
+//	@ExceptionHandler(PageableException.class)
+//	public JsonResponse handleServiceException(PageableException e){
+//		String stackTraceAsString = Throwables.getStackTraceAsString(e);
+//		LOGGER.error("【ServiceExceptionHandler - PageableException】\r\n [{}]", stackTraceAsString);
+//		return BasicResponse.error(BasicServiceCode.PAGE_INDEX_ERROR);
+//	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public JsonResponse handleValidException(MethodArgumentNotValidException e){

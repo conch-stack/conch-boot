@@ -2,6 +2,7 @@ package com.nabob.conch.minio;
 
 import io.minio.MinioClient;
 import io.minio.ObjectStat;
+import io.minio.RemoveBucketArgs;
 import io.minio.errors.*;
 import io.minio.messages.Bucket;
 import io.minio.policy.PolicyType;
@@ -34,16 +35,19 @@ public class MinioTemplate {
         }
     }
 
-    public List<Bucket> getAllBuckets() throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
+    public List<Bucket> getAllBuckets() throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException,
+            InternalException, ErrorResponseException, ServerException, InvalidResponseException, XmlParserException {
         return getMinioClient().listBuckets();
     }
 
-    public Optional<Bucket> getBucket(String bucketName) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
+    public Optional<Bucket> getBucket(String bucketName) throws IOException, InvalidKeyException, NoSuchAlgorithmException,
+            InsufficientDataException, InternalException, ErrorResponseException, ServerException, InvalidResponseException, XmlParserException {
         return getMinioClient().listBuckets().stream().filter( b -> b.name().equals(bucketName)).findFirst();
     }
 
-    public void removeBucket(String bucketName) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
-        getMinioClient().removeBucket(bucketName);
+    public void removeBucket(String bucketName) throws IOException, InvalidKeyException, NoSuchAlgorithmException,
+            InsufficientDataException, InternalException, ErrorResponseException, ServerException, InvalidResponseException, XmlParserException {
+        getMinioClient().removeBucket(RemoveBucketArgs.builder().bucket(bucketName).build());
     }
 
     /**

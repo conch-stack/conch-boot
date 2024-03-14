@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <project.encoding>UTF-8</project.encoding>
         <project.build.encoding>UTF-8</project.build.encoding>
 
@@ -27,30 +27,28 @@
 
         <!--3rd lib dependency-->
         <commons.beanutils.version>1.9.4</commons.beanutils.version>
-        <commons-io.version>2.7</commons-io.version>
-        <guava.version>32.0.0-jre</guava.version>
-        <reflections.version>0.9.11</reflections.version>
-        <redisson.version>3.11.1</redisson.version>
+        <commons-io.version>2.15.1</commons-io.version>
+        <guava.version>33.0.0-jre</guava.version>
+        <reflections.version>0.10.2</reflections.version>
+        <redisson.version>3.27.2</redisson.version>
         <retrofit.version>2.9.0</retrofit.version>
         <quartz.version>2.3.2</quartz.version>
-        <druid.version>1.1.17</druid.version>
-        <druid.starter.version>1.1.17</druid.starter.version>
-        <code.builder.core.version>1.0.5.RELEASE</code.builder.core.version>
-        <mysema.codegen.version>0.6.8</mysema.codegen.version>
-        <security.oauth2.version>2.3.6.RELEASE</security.oauth2.version>
-        <spring.security.jwt.version>1.0.10.RELEASE</spring.security.jwt.version>
-        <mybatis.pageable.core.version>1.0.7.RELEASE</mybatis.pageable.core.version>
-        <mybatis.enhance.core.version>1.1.1.RELEASE</mybatis.enhance.core.version>
-        <mybatis.enhance.dsl.version>1.1.1.RELEASE</mybatis.enhance.dsl.version>
-        <minio.version>3.0.10</minio.version>
-        <curator.version>2.12.0</curator.version>
-        <spring-data-elasticsearch.version>3.0.14.RELEASE</spring-data-elasticsearch.version>
-        <jest.version>5.3.4</jest.version>
-        <mybatis-flex.version>1.2.0</mybatis-flex.version>
+        <druid.version>1.2.21</druid.version>
+        <druid.starter.version>1.2.21</druid.starter.version>
+        <minio.version>8.5.9</minio.version>
+        <curator.version>5.6.0</curator.version>
+        <spring-data-elasticsearch.version>5.2.3</spring-data-elasticsearch.version>
+        <jest.version>6.3.1</jest.version>
+        <mybatis-flex.version>1.8.2</mybatis-flex.version>
+        <HikariCP.version>4.0.3</HikariCP.version>
+        <mysql-connector-j.version>8.0.32</mysql-connector-j.version>
 
         <!--maven plugin-->
-        <maven.staging.plugin>1.6.7</maven.staging.plugin>
+        <maven.staging.plugin>1.6.13</maven.staging.plugin>
         <maven.gpg.pluign>1.6</maven.gpg.pluign>
+        <flatten-maven-plugin.version>1.2.7</flatten-maven-plugin.version>
+        <maven.deploy.plugin.version>3.0.0</maven.deploy.plugin.version>
+        <maven.compiler.plugin>3.10.1</maven.compiler.plugin>
         <maven-plugin-api.version>3.6.1</maven-plugin-api.version>
         <maven-plugin-annotations.version>3.6.0</maven-plugin-annotations.version>
         <maven-plugin-plugin.version>3.6.0</maven-plugin-plugin.version>
@@ -89,27 +87,7 @@
             </dependency>
             <dependency>
                 <groupId>com.nabob.conch</groupId>
-                <artifactId>datasource-conch-boot</artifactId>
-                <version>${conch.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nabob.conch</groupId>
-                <artifactId>oauth-conch-boot</artifactId>
-                <version>${conch.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nabob.conch</groupId>
-                <artifactId>security-conch-boot</artifactId>
-                <version>${conch.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nabob.conch</groupId>
                 <artifactId>minio-conch-boot</artifactId>
-                <version>${conch.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nabob.conch</groupId>
-                <artifactId>quartz-conch-boot</artifactId>
                 <version>${conch.boot.version}</version>
             </dependency>
             <dependency>
@@ -146,32 +124,7 @@
             </dependency>
             <dependency>
                 <groupId>com.nabob.conch</groupId>
-                <artifactId>mybatis-pageable-conch-boot-starter</artifactId>
-                <version>${conch.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nabob.conch</groupId>
-                <artifactId>mybatis-enhance-conch-boot-starter</artifactId>
-                <version>${conch.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nabob.conch</groupId>
-                <artifactId>datasource-conch-boot-starter</artifactId>
-                <version>${conch.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nabob.conch</groupId>
-                <artifactId>security-oauth-jwt-conch-boot-starter</artifactId>
-                <version>${conch.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nabob.conch</groupId>
                 <artifactId>minio-conch-boot-starter</artifactId>
-                <version>${conch.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.nabob.conch</groupId>
-                <artifactId>quartz-conch-boot-starter</artifactId>
                 <version>${conch.boot.version}</version>
             </dependency>
             <dependency>
@@ -272,13 +225,6 @@
                 <version>${retrofit.version}</version>
             </dependency>
 
-            <!-- Api Boot -->
-            <!--ApiBoot Code Builder-->
-            <dependency>
-                <groupId>com.gitee.hengboy</groupId>
-                <artifactId>code-builder-core</artifactId>
-                <version>${code.builder.core.version}</version>
-            </dependency>
             <!--Maven Plugin-->
             <dependency>
                 <groupId>org.apache.maven</groupId>
@@ -289,29 +235,6 @@
                 <groupId>org.apache.maven.plugin-tools</groupId>
                 <artifactId>maven-plugin-annotations</artifactId>
                 <version>${maven-plugin-annotations.version}</version>
-            </dependency>
-            <!--ApiBoot Mybatis Pageable-->
-            <dependency>
-                <groupId>com.gitee.hengboy</groupId>
-                <artifactId>mybatis-pageable-core</artifactId>
-                <version>${mybatis.pageable.core.version}</version>
-            </dependency>
-            <!--ApiBoot Mybatis Enhance-->
-            <dependency>
-                <groupId>com.gitee.hengboy</groupId>
-                <artifactId>mybatis-enhance-core</artifactId>
-                <version>${mybatis.enhance.core.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.gitee.hengboy</groupId>
-                <artifactId>mybatis-enhance-dsl</artifactId>
-                <version>${mybatis.enhance.dsl.version}</version>
-            </dependency>
-            <!--Codegen-->
-            <dependency>
-                <groupId>com.mysema.codegen</groupId>
-                <artifactId>codegen</artifactId>
-                <version>${mysema.codegen.version}</version>
             </dependency>
             <!--druid-->
             <dependency>
@@ -324,23 +247,6 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.starter.version}</version>
-            </dependency>
-            <!--ApiBoot & Quartz-->
-            <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz</artifactId>
-                <version>${quartz.version}</version>
-            </dependency>
-            <!--ApiBoot Security-->
-            <dependency>
-                <groupId>org.springframework.security.oauth</groupId>
-                <artifactId>spring-security-oauth2</artifactId>
-                <version>${security.oauth2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-jwt</artifactId>
-                <version>${spring.security.jwt.version}</version>
             </dependency>
             <!-- minio -->
             <dependency>
@@ -396,8 +302,23 @@
             </dependency>
             <dependency>
                 <groupId>com.mybatis-flex</groupId>
-                <artifactId>mybatis-flex-spring-boot-starter</artifactId>
+                <artifactId>mybatis-flex-spring-boot3-starter</artifactId>
                 <version>${mybatis-flex.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mybatis-flex</groupId>
+                <artifactId>mybatis-flex-codegen</artifactId>
+                <version>${mybatis-flex.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${HikariCP.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -433,12 +354,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-plugin-plugin</artifactId>
                     <version>${maven-plugin-plugin.version}</version>
-                </plugin>
-                <!--ApiBoot Mybatis Enhance Codegen-->
-                <plugin>
-                    <groupId>com.nabob.conch</groupId>
-                    <artifactId>conch-boot-mybatis-enhance-maven-codegen</artifactId>
-                    <version>${conch.boot.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

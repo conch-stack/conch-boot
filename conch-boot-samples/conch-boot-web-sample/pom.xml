@@ -10,7 +10,7 @@
     <artifactId>conch-boot-web-sample</artifactId>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 

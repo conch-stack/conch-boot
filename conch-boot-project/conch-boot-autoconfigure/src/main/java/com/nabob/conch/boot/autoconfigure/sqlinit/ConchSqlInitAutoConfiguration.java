@@ -1,8 +1,6 @@
 package com.nabob.conch.boot.autoconfigure.sqlinit;
 
 import com.gitee.hengboy.mybatis.enhance.MapperFactoryBean;
-import com.nabob.conch.boot.autoconfigure.datasource.ApiBootDataSourceSwitchAutoConfiguration;
-import com.nabob.conch.boot.autoconfigure.enhance.ApiBootMyBatisEnhanceAutoConfiguration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.ObjectProvider;
@@ -30,7 +28,7 @@ import javax.sql.DataSource;
 @Configuration
 @ConditionalOnClass({SqlSessionFactory.class, SqlSessionFactoryBean.class, MapperFactoryBean.class})
 @ConditionalOnBean({DataSource.class})
-@AutoConfigureAfter({DataSourceAutoConfiguration.class, ApiBootDataSourceSwitchAutoConfiguration.class, ApiBootMyBatisEnhanceAutoConfiguration.class})
+@AutoConfigureAfter({DataSourceAutoConfiguration.class})
 @ConditionalOnProperty(value = "conch.init-sql.enable", havingValue = "true")
 public class ConchSqlInitAutoConfiguration {
 
