@@ -2,6 +2,7 @@ package com.nabob.conch.boot.autoconfigure.mail;
 
 import com.nabob.conch.web.mail.ConchMailSender;
 import com.nabob.conch.web.mail.DefaultMailSender;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -27,7 +28,7 @@ public class MailAutoConfiguration {
 
     @Bean(name = "defaultMailSender")
     @ConditionalOnMissingBean(name = "defaultMailSender")
-    public DefaultMailSender defaultMailSender(JavaMailSender mailSender, MailSenderProperties mailSenderProperties) {
-        return new DefaultMailSender(mailSender, mailSenderProperties.getPrefix(), mailSenderProperties.getSendFrom(), mailSenderProperties.getSendTo());
+    public DefaultMailSender defaultMailSender(ObjectProvider<JavaMailSender> mailSenderObjectProvider, MailSenderProperties mailSenderProperties) {
+        return new DefaultMailSender(mailSenderObjectProvider.getIfAvailable(), mailSenderProperties.getPrefix(), mailSenderProperties.getSendFrom(), mailSenderProperties.getSendTo());
     }
 }

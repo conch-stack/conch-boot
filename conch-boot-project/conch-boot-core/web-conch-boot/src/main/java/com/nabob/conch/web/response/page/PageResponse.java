@@ -10,10 +10,10 @@ public class PageResponse<T> extends AbstractJsonResponse {
     protected PageResponse() {
     }
 
-    private Integer index;
-    private Integer size;
-    private Long count;//总记录数
-    private Long pageCount;//总页数
+    private long index;
+    private long size;
+    private long count;//总记录数
+    private long pageCount;//总页数
     private List<T> data;
 
     public static <T> PageResponse<T> create(PageResult<T> pageResult) {
@@ -31,20 +31,20 @@ public class PageResponse<T> extends AbstractJsonResponse {
         return response;
     }
 
-//    public static <T> PageResponse<T> createEnhance(com.gitee.hengboy.mybatis.pageable.Page<T> page) {
-//        PageResponse<T> response = new PageResponse<>();
-//        response.data = page.getData();
-//        response.index = page.getPageIndex();
-//        response.size = page.getPageSize();
-//        response.count = page.getTotalElements();
-//        response.pageCount = page.getTotalPages();
-//
-//        response.message = BasicServiceCode.SUCCESS.getMesg();
-//        response.codeDescription = BasicServiceCode.SUCCESS.getDesc();
-//        response.code = BasicServiceCode.SUCCESS.getCode();
-//
-//        return response;
-//    }
+    public static <T> PageResponse<T> createEnhance(com.mybatisflex.core.paginate.Page<T> page) {
+        PageResponse<T> response = new PageResponse<>();
+        response.data = page.getRecords();
+        response.index = page.getPageNumber();
+        response.size = page.getPageSize();
+        response.count = page.getTotalRow();
+        response.pageCount = page.getTotalPage();
+
+        response.message = BasicServiceCode.SUCCESS.getMesg();
+        response.codeDescription = BasicServiceCode.SUCCESS.getDesc();
+        response.code = BasicServiceCode.SUCCESS.getCode();
+
+        return response;
+    }
 
     public JsonResponse error() {
         this.message = BasicServiceCode.FAILED.getMesg();
@@ -65,20 +65,20 @@ public class PageResponse<T> extends AbstractJsonResponse {
         return this;
     }
 
-    public Integer getIndex() {
+    public long getIndex() {
         return index;
     }
 
-    public PageResponse setIndex(Integer index) {
+    public PageResponse setIndex(long index) {
         this.index = index;
         return this;
     }
 
-    public Integer getSize() {
+    public long getSize() {
         return size;
     }
 
-    public PageResponse setSize(Integer size) {
+    public PageResponse setSize(long size) {
         this.size = size;
         return this;
     }
@@ -92,19 +92,19 @@ public class PageResponse<T> extends AbstractJsonResponse {
         return this;
     }
 
-    public Long getCount() {
+    public long getCount() {
         return count;
     }
 
-    public void setCount(Long count) {
+    public void setCount(long count) {
         this.count = count;
     }
 
-    public Long getPageCount() {
+    public long getPageCount() {
         return pageCount;
     }
 
-    public void setPageCount(Long pageCount) {
+    public void setPageCount(long pageCount) {
         this.pageCount = pageCount;
     }
 }
