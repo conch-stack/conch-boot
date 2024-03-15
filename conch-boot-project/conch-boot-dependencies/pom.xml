@@ -37,7 +37,6 @@
         <druid.starter.version>1.2.21</druid.starter.version>
         <minio.version>8.5.9</minio.version>
         <curator.version>5.6.0</curator.version>
-        <spring-data-elasticsearch.version>5.2.2</spring-data-elasticsearch.version>
         <spring-data-elasticsearch-starter.version>3.2.2</spring-data-elasticsearch-starter.version>
         <mybatis-flex.version>1.8.2</mybatis-flex.version>
         <HikariCP.version>4.0.3</HikariCP.version>
@@ -275,21 +274,6 @@
                 </exclusions>
             </dependency>
             <!--elasticsearch-->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.data</groupId>-->
-<!--                <artifactId>spring-data-elasticsearch</artifactId>-->
-<!--                <version>${spring-data-elasticsearch.version}</version>-->
-<!--                <exclusions>-->
-<!--                    <exclusion>-->
-<!--                        <artifactId>jcl-over-slf4j</artifactId>-->
-<!--                        <groupId>org.slf4j</groupId>-->
-<!--                    </exclusion>-->
-<!--                    <exclusion>-->
-<!--                        <artifactId>log4j-core</artifactId>-->
-<!--                        <groupId>org.apache.logging.log4j</groupId>-->
-<!--                    </exclusion>-->
-<!--                </exclusions>-->
-<!--            </dependency>-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
