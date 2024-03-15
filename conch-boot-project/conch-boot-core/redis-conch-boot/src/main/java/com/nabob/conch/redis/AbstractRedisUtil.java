@@ -6,6 +6,9 @@ import org.springframework.data.redis.connection.RedisStringCommands;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.types.Expiration;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
@@ -14,15 +17,17 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class AbstractRedisUtil {
 
-    protected StringRedisTemplate redisTemplate;
-
     private String prefix;
 
-    protected RedisSerializers redisSerializers;
+    protected StringRedisTemplate redisTemplate;
+
+    protected GenericJackson2JsonRedisSerializer redisSerializers;
+
+    protected RedisSerializer<String> stringRedisSerializer = RedisSerializer.string();
 
     public AbstractRedisUtil(StringRedisTemplate redisTemplate,
                              String prefix,
-                             RedisSerializers redisSerializers) {
+                             GenericJackson2JsonRedisSerializer redisSerializers) {
         this.redisTemplate = redisTemplate;
         this.prefix = prefix;
         this.redisSerializers = redisSerializers;
@@ -221,7 +226,7 @@ public abstract class AbstractRedisUtil {
 
     protected byte[] rawStr(String key) {
         Assert.notNull(key, "non null key required");
-        return redisSerializers.getStringSerializer().serialize(key);
+        return stringRedisSerializer.serialize(key);
     }
 
     //region serializer functions

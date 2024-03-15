@@ -1,22 +1,38 @@
 package com.nabob.conch.minio;
 
+import io.minio.BucketExistsArgs;
+import io.minio.GetObjectArgs;
+import io.minio.GetObjectResponse;
+import io.minio.GetPresignedObjectUrlArgs;
+import io.minio.MakeBucketArgs;
 import io.minio.MinioClient;
-import io.minio.ObjectStat;
+import io.minio.PutObjectArgs;
 import io.minio.RemoveBucketArgs;
-import io.minio.errors.*;
+import io.minio.RemoveObjectArgs;
+import io.minio.StatObjectArgs;
+import io.minio.StatObjectResponse;
+import io.minio.errors.ErrorResponseException;
+import io.minio.errors.InsufficientDataException;
+import io.minio.errors.InternalException;
+import io.minio.errors.InvalidResponseException;
+import io.minio.errors.ServerException;
+import io.minio.errors.XmlParserException;
 import io.minio.messages.Bucket;
-import io.minio.policy.PolicyType;
-import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
-
+/**
+ * <a herf="https://min.io/docs/minio/linux/developers/java/API.html">API</a>
+ * <a herf="https://github.com/minio/minio-java/tree/release/examples">Example</a>
+ * <a herf="https://blog.csdn.net/qq_43437874/category_10562215.html">CSDN</a>
+ * <a herf="https://yunyanchengyu.blog.csdn.net/article/details/120855875">Policy</a>
+ * <a herf="https://support.huaweicloud.com/perms-cfg-obs/obs_40_0040.html">OBS</a>
+ */
 public class MinioTemplate {
 
     private MinioClient minioClient;
@@ -28,10 +44,11 @@ public class MinioTemplate {
     /**
      * Bucket Operations
      */
-    public void createBucket(String bucketName) throws XmlPullParserException, NoSuchAlgorithmException, InvalidKeyException, IOException, RegionConflictException, NoResponseException, InternalException, ErrorResponseException, InsufficientDataException, InvalidBucketNameException {
+    public void createBucket(String bucketName) throws NoSuchAlgorithmException, InvalidKeyException, IOException,
+            ServerException, InvalidResponseException, XmlParserException, InternalException, ErrorResponseException, InsufficientDataException {
         MinioClient client = getMinioClient();
-        if(!client.bucketExists(bucketName)){
-            client.makeBucket(bucketName);
+        if (!client.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build())) {
+            client.makeBucket(MakeBucketArgs.builder().bucket(bucketName).build());
         }
     }
 
@@ -42,7 +59,7 @@ public class MinioTemplate {
 
     public Optional<Bucket> getBucket(String bucketName) throws IOException, InvalidKeyException, NoSuchAlgorithmException,
             InsufficientDataException, InternalException, ErrorResponseException, ServerException, InvalidResponseException, XmlParserException {
-        return getMinioClient().listBuckets().stream().filter( b -> b.name().equals(bucketName)).findFirst();
+        return getMinioClient().listBuckets().stream().filter(b -> b.name().equals(bucketName)).findFirst();
     }
 
     public void removeBucket(String bucketName) throws IOException, InvalidKeyException, NoSuchAlgorithmException,
@@ -51,105 +68,30 @@ public class MinioTemplate {
     }
 
     /**
-     * Set policy on bucket and object prefix.
-     *
-     * @param bucketName   Bucket name.
-     * @param objectPrefix Name of the object prefix.
-     * @param policyType   Enum of {@link PolicyType}.
-     *
-     * </p><b>Example:</b><br>
-     * <pre>{@code setBucketPolicy("my-bucketname", "my-objectname", PolicyType.READ_ONLY); }</pre>
-     */
-    public void setBucketPolicy(String bucketName, String objectPrefix, PolicyType policyType)
-            throws InvalidBucketNameException, InvalidObjectPrefixException, NoSuchAlgorithmException,
-            InsufficientDataException, IOException, InvalidKeyException, NoResponseException,
-            XmlPullParserException, ErrorResponseException, InternalException {
-        getMinioClient().setBucketPolicy(bucketName, objectPrefix, policyType);
-    }
-
-    /**
-     * Get bucket policy at given objectPrefix
-     *
-     * @param bucketName   Bucket name.
-     * @param objectPrefix name of the object prefix
-     *
-     * </p><b>Example:</b><br>
-     * <pre>{@code String policy = minioClient.getBucketPolicy("my-bucketname", "my-objectname");
-     * System.out.println(policy); }</pre>
-     */
-    public PolicyType getBucketPolicy(String bucketName, String objectPrefix)
-            throws InvalidBucketNameException, InvalidObjectPrefixException, NoSuchAlgorithmException,
-            InsufficientDataException, IOException, InvalidKeyException, NoResponseException,
-            XmlPullParserException, ErrorResponseException, InternalException {
-        return getMinioClient().getBucketPolicy(bucketName, objectPrefix);
-    }
-
-    /**
-     * Get all policies in the given bucket.
-     *
-     * @param bucketName the name of the bucket for which policies are to be listed.
-     *
-     * </p><b>Example:</b><br>
-     * <pre>{@code
-     *
-     * final Map<String, PolicyType> policies = minioClient.getBucketPolicy("my-bucketname");
-     * for (final Map.Entry<String, PolicyType> policyEntry : policies.entrySet()) {
-     *    final String objectPrefix = policyEntry.getKey();
-     *    final PolicyType policyType = policyEntry.getValue();
-     *    System.out.println(
-     *        String.format("Access permission %s found for object prefix %s", policyType.getValue(), objectPrefix)
-     *    );
-     * }}
-     * </pre>
-     *
-     * @return a map of object prefixes (keys) to their policy types (values) for a given bucket.
-     * @throws InvalidBucketNameException   upon an invalid bucket name
-     * @throws IOException                  upon connection error
-     * @throws InvalidKeyException          upon an invalid access key or secret key
-     * @throws NoSuchAlgorithmException     upon requested algorithm was not found during signature calculation
-     * @throws InsufficientDataException    upon insufficient data
-     * @throws NoResponseException          upon no response from server
-     * @throws XmlPullParserException       upon parsing response xml
-     * @throws InternalException            upon internal library error
-     * @throws ErrorResponseException       upon unsuccessful execution
-     */
-    public Map<String, PolicyType> getBucketPolicy(String bucketName)
-            throws InvalidBucketNameException, IOException, InvalidKeyException, NoSuchAlgorithmException,
-            InsufficientDataException, NoResponseException, XmlPullParserException,
-            InternalException, ErrorResponseException, InvalidObjectPrefixException {
-        // Input validation.
-        return getMinioClient().getBucketPolicy(bucketName);
-    }
-
-    /**
      * Object operations
      */
-    public String getObjectURL(String bucketName, String objectName, Integer expires) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InvalidExpiresRangeException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
-        return getMinioClient().presignedGetObject(bucketName, objectName, expires);
+    public String getObjectURL(String bucketName, String objectName, Integer expires) throws ServerException, InsufficientDataException,
+            ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+        return getMinioClient().getPresignedObjectUrl(GetPresignedObjectUrlArgs.builder().bucket(bucketName).object(objectName).expiry(expires).build());
     }
 
-    public void saveObject(String bucketName, String objectName, InputStream stream, String contentType) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InvalidArgumentException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
-        getMinioClient().putObject(bucketName, objectName, stream, contentType);
+    public void saveObject(String bucketName, String objectName, InputStream stream, String contentType) throws IOException, ServerException,
+            InsufficientDataException, ErrorResponseException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+        getMinioClient().putObject(PutObjectArgs.builder().bucket(bucketName).object(objectName).stream(stream, stream.available(), -1).contentType(contentType).build());
     }
 
-    public void saveObject(String bucketName, String objectName, InputStream stream, long size, String contentType) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InvalidArgumentException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
-        getMinioClient().putObject(bucketName, objectName, stream, size, contentType);
+    public StatObjectResponse getObjectInfo(String bucketName, String objectName) throws ServerException, InsufficientDataException,
+            ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+        return getMinioClient().statObject(StatObjectArgs.builder().bucket(bucketName).object(objectName).build());
     }
 
-    public ObjectStat getObjectInfo(String bucketName, String objectName) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
-        return getMinioClient().statObject(bucketName, objectName);
+    public GetObjectResponse getObject(String bucketName, String objectName) throws ServerException, InsufficientDataException,
+            ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+        return getMinioClient().getObject(GetObjectArgs.builder().bucket(bucketName).object(objectName).build());
     }
 
-    public InputStream getObject(String bucketName, String objectName) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InvalidArgumentException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
-        return getMinioClient().getObject(bucketName, objectName);
-    }
-
-//    public String getObjectUrl(String bucketName, String objectName) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException {
-//        return getMinioClient().getObjectUrl(bucketName, objectName);
-//    }
-
-    public void removeObject(String bucketName, String objectName ) throws IOException, InvalidKeyException, NoSuchAlgorithmException, InsufficientDataException, InternalException, NoResponseException, InvalidBucketNameException, XmlPullParserException, ErrorResponseException, InvalidArgumentException {
-        getMinioClient().removeObject(bucketName, objectName);
+    public void removeObject(String bucketName, String objectName) throws ServerException, InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+        getMinioClient().removeObject(RemoveObjectArgs.builder().bucket(bucketName).object(objectName).build());
     }
 
     public MinioClient getMinioClient() {

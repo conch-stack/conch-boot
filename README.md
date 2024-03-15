@@ -19,7 +19,6 @@
 | anti-scrapy-conch-boot-starter         | Anti-Scrapy     | 开箱即用，反爬虫(屏蔽：恶意请求、渠道刷量等)                 |
 | zookeeper-conch-boot-starter           | Zookeeper       | 简单包装curator工具到SpringBoot，操作Zookeeper               |
 | dingtalk-conch-boot-starter            | Dingtalk        | 开箱即用，集成钉钉机器人通知API                              |
-| mutil-elasticsearch-conch-boot-starter | Elasticsearch   | 开箱即用，多ES数据源支持，基于Spring Elasticsearch and Jest  |
 | retrofit-conch-boot-starter            | Retrofit        | 开箱即用，支持类似Feign的注解式Http远程调用支持，提供识别远程转本地调用支持 |
 
 ##### 使用方式：

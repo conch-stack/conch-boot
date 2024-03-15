@@ -4,6 +4,7 @@ import com.nabob.conch.tools.code.BasicServiceCode;
 import com.nabob.conch.tools.code.ServiceCode;
 import com.nabob.conch.web.response.BasicResponse;
 import com.nabob.conch.web.response.JsonResponse;
+import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.EnumUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.boot.autoconfigure.web.ErrorProperties;
@@ -16,8 +17,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Author: zjz

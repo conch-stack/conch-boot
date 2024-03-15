@@ -2,17 +2,19 @@ package com.nabob.conch.redis;
 
 import com.alibaba.fastjson.TypeReference;
 import com.nabob.conch.tools.utils.CollectionExtendUtil;
-import org.springframework.data.redis.connection.jedis.JedisConverters;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.lang.Nullable;
+import redis.clients.jedis.util.SafeEncoder;
 
 import java.util.Optional;
 import java.util.Set;
 
-@SuppressWarnings({"all", "unchecked"})
+@SuppressWarnings({"all"})
 public class RedisGenericUtil extends AbstractRedisUtil {
 
-    public RedisGenericUtil(StringRedisTemplate redisTemplate, String prefix, RedisSerializers redisSerializer) {
+    public RedisGenericUtil(StringRedisTemplate redisTemplate, String prefix, GenericJackson2JsonRedisSerializer redisSerializer) {
         super(redisTemplate, prefix, redisSerializer);
     }
 
@@ -71,7 +73,7 @@ public class RedisGenericUtil extends AbstractRedisUtil {
     //region serializer functions
 
     protected <T> T parseObject(String text) {
-        return (T) redisSerializers.getJacksonSerializer().deserialize(JedisConverters.toBytes(text));
+        return (T) redisSerializers.deserialize(toBytes(text));
     }
 
     @Override
@@ -86,11 +88,21 @@ public class RedisGenericUtil extends AbstractRedisUtil {
 
     @Override
     protected String toJSONString(Object object) {
-        return JedisConverters.toString(redisSerializers.getJacksonSerializer().serialize(object));
+        return toString(redisSerializers.serialize(object));
     }
 
     public Set<String> keys(String pattern) {
         return redisTemplate.keys(formatKey(pattern));
     }
     //endregion
+
+    @Nullable
+    public static byte[] toBytes(@Nullable String source) {
+        return source == null ? null : SafeEncoder.encode(source);
+    }
+
+    @Nullable
+    public static String toString(@Nullable byte[] source) {
+        return source == null ? null : SafeEncoder.encode(source);
+    }
 }

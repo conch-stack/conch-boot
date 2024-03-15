@@ -1,8 +1,6 @@
 package com.nabob.conch.boot.autoconfigure.minio;
 
 import io.minio.MinioClient;
-import io.minio.errors.InvalidEndpointException;
-import io.minio.errors.InvalidPortException;
 import com.nabob.conch.minio.MinioTemplate;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -17,13 +15,16 @@ public class MinioAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean(MinioClient.class)
-    public MinioClient minioClient(MinioProperties minioProperties) throws InvalidPortException, InvalidEndpointException {
-        return new MinioClient(minioProperties.getUrl(), minioProperties.getAccessKey(), minioProperties.getSecretKey());
+    public MinioClient minioClient(MinioProperties minioProperties) {
+        return MinioClient.builder()
+                .endpoint(minioProperties.getUrl())
+                .credentials(minioProperties.getAccessKey(), minioProperties.getSecretKey())
+                .build();
     }
 
     @Bean
     @ConditionalOnMissingBean(MinioTemplate.class)
-    MinioTemplate minioTemplate(MinioClient minioClient){
+    public MinioTemplate minioTemplate(MinioClient minioClient){
         return new MinioTemplate(minioClient);
     }
 }
